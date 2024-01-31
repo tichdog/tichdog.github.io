@@ -1,0 +1,8 @@
+/*Это миксины или примесь, в css файле ее не будет*/
+.testMixin {
+  background-color: #fff;
+}
+/*это переменная например цвет*/
+.testVariable {
+  background-color: #ff0000;
+}
