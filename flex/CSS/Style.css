@@ -1,0 +1,95 @@
+html {
+  background-color: darkgray;
+}
+body {
+  margin: 0 4%;
+  background-color: darkgray;
+}
+header,
+footer {
+  margin-top: 2em;
+  /*height: 6em;*/
+  background-color: #97bb97;
+  border-radius: 0.5em;
+}
+.main {
+  margin-top: 4em;
+}
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+.main-spam {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 21em;
+  background-color: #cea2a2;
+  min-width: 20%;
+  border-radius: 0.7em;
+}
+.main-spam-text {
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+.main-news {
+  gap: 1em;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: darkgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-head {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #adced7;
+  /*height: 18em;*/
+  border-radius: 0.7em;
+}
+.main-head-text {
+  padding: 0.2em;
+  font-size: 1.5em;
+}
+.main-block {
+  max-width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: gray;
+  /*height: 22em;*/
+}
+.main-text {
+  font-size: 2em;
+  text-align: center;
+}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+h1 {
+  font-family: sans-serif;
+  font-size: 3em;
+  text-align: center;
+  padding: 0.3em;
+}
+h2 {
+  font-size: 1.2em;
+  text-align: justify;
+  padding: 0.5em;
+}
+img {
+  min-height: 85%;
+}
+img:hover {
+  opacity: 0.5;
+}
