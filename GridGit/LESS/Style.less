@@ -1,0 +1,49 @@
+html{
+  background-color: #414141;
+}
+
+
+.main{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+
+  &-container{
+    padding: 0.5em;
+    border: 3px solid white;
+    border-radius: 0.5em;
+    background-color: #008a8a;
+    font-size: 2em;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+main{
+  margin: 2em 2em 0 2em;
+}
+
+p{
+  text-align: center;
+  color: white;
+}
+
+img{
+  margin: 0.5em;
+  max-width: 95%;
+  border-radius: 5px;
+}
+
+img:hover{
+  opacity: 0.5;
+}
+
+.span-column-2{
+  grid-column-start: span 2;
+}
