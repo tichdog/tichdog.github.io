@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- width=device-width устанавливает ширину области просмотра равной ширине экрана -->
+    <meta property="og:image" content="image.jpg">
+    <!-- Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях,
+     приложениях чата или других сайтах, которые очищают URL-адреса. -->
+
+    <!--<link rel="stylesheet" href="../CSS/reset-css-style.css">-->
+    <link rel="stylesheet" href="../CSS/calcStyle.css">
+    <script src="../JS/calc.js" defer></script>
+</head>
+<body>
+
+<header class="linkCalc">
+    <a href="index.html">Авто-текст</a>
+</header>
+
+<div class="container">
+    <!-- контейнер калькулятора -->
+    <fieldset id="container">
+        <!-- общая форма -->
+        <form name="calculator">
+
+            <!-- элемент дисплея калькулятора -->
+            <p id="display"></p>
+
+            <!-- кнопка с цифрой 7 -->
+            <input class="button digits" type="button" value="7" onclick="addToDisplay('7')">
+            <!-- кнопка с цифрой 8 -->
+            <input class="button digits" type="button" value="8" onclick="addToDisplay('8')">
+            <!-- кнопка с цифрой 9 -->
+            <input class="button digits" type="button" value="9" onclick="addToDisplay('9')">
+            <!-- кнопка сложения -->
+            <input class="button mathButtons" type="button" value="+" onclick="addToOperation('+')">
+            <br />
+            <!-- кнопки среднего ряда -->
+            <!-- кнопка с цифрой 4 -->
+            <input class="button digits" type="button" value="4" onclick="addToDisplay('4')">
+            <!-- кнопка с цифрой 5 -->
+            <input class="button digits" type="button" value="5" onclick="addToDisplay('5')">
+            <!-- кнопка с цифрой 6 -->
+            <input class="button digits" type="button" value="6" onclick="addToDisplay('6')">
+            <!-- кнопка вычитания -->
+            <input class="button mathButtons" type="button" value="-" onclick="addToOperation('-')">
+            <br />
+            <!-- кнопки нижнего ряда -->
+            <!-- кнопка с цифрой 1 -->
+            <input class="button digits" type="button" value="1" onclick="addToDisplay('1')">
+            <!-- кнопка с цифрой 2 -->
+            <input class="button digits" type="button" value="2" onclick="addToDisplay('2')">
+            <!-- кнопка с цифрой 3 -->
+            <input class="button digits" type="button" value="3" onclick="addToDisplay('3')">
+            <!-- кнопка умножения -->
+            <input class="button mathButtons" type="button" value="x" onclick="addToOperation('*')">
+            <br />
+            <!-- кнопки подвала -->
+            <!-- кнопка сброса -->
+            <input id="clearButton" class="button" type="button" value="C" onclick="ClearDisplay()">
+            <!-- кнопка с цифрой 0 -->
+            <input class="button digits" type="button" value="0" onclick="addToDisplay('0')">
+            <!-- кнопка математического оператора «равно» -->
+            <input class="button mathButtons" type="button" value="=" onclick="Result()">
+            <!-- кнопка деления / -->
+            <input class="button mathButtons" type="button" value="/" onclick="addToOperation('/')">
+        </form>
+    </fieldset>
+</div>
+</body>
+</html>
