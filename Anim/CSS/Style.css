@@ -1,0 +1,211 @@
+html {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(#3f3f3f), to(#000000));
+  background: linear-gradient(#000000, #3f3f3f, #000000);
+}
+.header {
+  display: inline-block;
+}
+.header-h1 {
+  -webkit-animation-name: animationText;
+          animation-name: animationText;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  font-size: 4em;
+  color: #fff6bb;
+  text-align: left;
+  padding-top: 0.5em;
+}
+h2 {
+  -webkit-animation-name: animH2;
+          animation-name: animH2;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: 3.5em;
+  text-align: center;
+  padding: 0.5em;
+}
+p {
+  color: white;
+  font-size: 2em;
+  margin: 1em;
+}
+.select {
+  margin: 0 1em 1em 1em;
+  font-size: 2.5em;
+  color: white;
+  background: red;
+  padding: 0.5em;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  /*  &:focus{
+    background: #5b5b5b;
+  }*/
+}
+.select:hover {
+  background: #850000;
+  -webkit-transform: translateY(-0.1em) translateX(-0.1em);
+          transform: translateY(-0.1em) translateX(-0.1em);
+}
+.select:active {
+  background: #2dd300;
+}
+.main-h2 {
+  display: block;
+  text-align: center;
+}
+.main-block {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdd78), color-stop(#ff9a9a), to(#c0ff8e));
+  background: linear-gradient(#ffdd78, #ff9a9a, #c0ff8e);
+  padding: 0 5em 3em 5em;
+}
+.main-block-cat {
+  text-align: center;
+}
+.main-block-p {
+  text-align: justify;
+  color: black;
+  font-weight: bold;
+}
+.main-shadow {
+  position: relative;
+  width: 500px;
+  height: 310px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#262626));
+  background: linear-gradient(#000000, #262626);
+}
+.main-shadow:before,
+.main-shadow:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  left: -2px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 500%;
+  z-index: -1;
+  -webkit-animation: anim 30s ease infinite;
+          animation: anim 30s ease infinite;
+}
+.main-shadow:after {
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+}
+.main-container-cat {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 2em;
+}
+.main-container-cat-v2 {
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+@-webkit-keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@-webkit-keyframes animationText {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  50% {
+    -webkit-transform: translateX(860px);
+            transform: translateX(860px);
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+@keyframes animationText {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  50% {
+    -webkit-transform: translateX(860px);
+            transform: translateX(860px);
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+@-webkit-keyframes animSVG {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: black;
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes animSVG {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: black;
+  }
+  100% {
+    fill: white;
+  }
+}
+@-webkit-keyframes animH2 {
+  0%,
+  100% {
+    font-size: 3.5em;
+  }
+  50% {
+    font-size: 4em;
+  }
+}
+@keyframes animH2 {
+  0%,
+  100% {
+    font-size: 3.5em;
+  }
+  50% {
+    font-size: 4em;
+  }
+}
+svg path {
+  fill: white;
+  -webkit-animation-name: animSVG;
+          animation-name: animSVG;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
