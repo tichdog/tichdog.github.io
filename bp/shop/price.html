@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- width=device-width устанавливает ширину области просмотра равной ширине экрана -->
+    <meta property="og:image" content="image.jpg">
+    <!-- Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях,
+     приложениях чата или других сайтах, которые очищают URL-адреса. -->
+    <title>Приют - кошки и уют</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
+
+    <script src="./js/index.js" type="module" defer></script>
+</head>
+
+<body>
+<noscript>JS error!</noscript>
+<header>
+    <div class="header-container">
+        <div>
+            <img src="../image/love.png" alt="logo" class="header-logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="header-li"><a href="../HTML/index.html">Главная</a></li>
+                <li class="header-li"><a href="../HTML/gallery.html">Фотогалерея</a></li>
+                <li class="header-li"><a href="../HTML/pets.html">Питомцы</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+    <div class="wrapper">
+        <h1>Товары нашего магазина</h1>
+        <div class="cards"></div>
+        <button class="show-cards none">Показать еще</button>
+
+        <a href="basket.html" class="basket">
+            <div class="basket__inner">
+                <svg width="38" height="38" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M.75-.02a.75.75 0 100 1.5l.408-.006 1.606 1.281 1.839 6.881L4.237 12a2 2 0 102.188 2.722l5.705.028a2 2 0 100-1.5l-5.705-.028a2.007 2.007 0 00-.722-.898l.438-2.632 7.933.027 1.91-7.715H4.227L1.683-.026 1.68-.02v-.005L.75-.02z" fill="#000"></path>
+                </svg>
+                <span class="basket__count">0</span>
+            </div>
+        </a>
+
+    </div>
+
+</main>
+<footer>
+    <div class="footer-container">
+        <a href="tel:+7-605-589-10-10" class="footer-link">Наш телефон: +7-605-589-10-10</a>
+        <a href="mailto:animal_love@cat.com" class="footer-link">Почта: animal_love@cat.com</a>
+    </div>
+</footer>
+</body>
+
+</html>
