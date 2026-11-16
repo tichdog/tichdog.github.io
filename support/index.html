@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Поддержка и удаление данных — Todo Calendar</title>
+<meta name="description" content="Поддержка Todo Calendar: как установить приложение, включить синхронизацию, восстановить доступ и удалить все данные.">
+<meta name="theme-color" content="#0d2a47">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://tichdog.github.io/support/">
+<link rel="icon" href="../assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/app-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Поддержка и удаление данных — Todo Calendar">
+<meta property="og:description" content="Установка, синхронизация, напоминания и удаление данных в приложении Todo Calendar.">
+<meta property="og:url" content="https://tichdog.github.io/support/">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#doc-body">
+  <span data-lang-block="ru">Перейти к содержимому</span>
+  <span data-lang-block="en">Skip to content</span>
+</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/app-icon.png" alt="" width="38" height="38">
+      <span>
+        Todo Calendar
+        <small>
+          <span data-lang-block="ru">Задачи · календарь · заметки</span>
+          <span data-lang-block="en">Tasks · calendar · notes</span>
+        </small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Навигация">
+      <a href="../index.html#features" data-lang-block="ru">Возможности</a>
+      <a href="../privacy/index.html" data-lang-block="ru">Политика</a>
+      <a href="../terms/index.html" data-lang-block="ru">Условия</a>
+      <a href="index.html" data-lang-block="ru">Поддержка</a>
+      <a href="../index.html#features-en" data-lang-block="en">Features</a>
+      <a href="../privacy/index.html" data-lang-block="en">Privacy</a>
+      <a href="../terms/index.html" data-lang-block="en">Terms</a>
+      <a href="index.html" data-lang-block="en">Support</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang-switch" role="group" aria-label="Язык / Language">
+        <button type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="icon-btn theme-toggle" type="button" data-toggle-theme aria-label="Тёмная тема" title="Тёмная тема">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" data-toggle-menu aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="doc-hero">
+    <div class="wrap">
+      <h1>
+        <span data-lang-block="ru">Поддержка</span>
+        <span data-lang-block="en">Support</span>
+      </h1>
+      <p class="lead" style="margin-bottom:0">
+        <span data-lang-block="ru">Установка, синхронизация, напоминания и удаление данных — коротко и по делу. Если ответа нет, напишите нам.</span>
+        <span data-lang-block="en">Installation, sync, reminders and data deletion — short and to the point. If your answer is missing, write to us.</span>
+      </p>
+      <div class="doc-meta">
+        <span class="badge">Todo Calendar 1.0.1</span>
+        <span class="badge">
+          <span data-lang-block="ru">Android 6.0+ · Windows 10/11 · Linux x64</span>
+          <span data-lang-block="en">Android 6.0+ · Windows 10/11 · Linux x64</span>
+        </span>
+        <span class="badge">
+          <span data-lang-block="ru">Русский · English</span>
+          <span data-lang-block="en">Russian · English</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap doc-layout">
+
+    <!-- ============ RU ============ -->
+    <div class="doc-lang" data-lang-block="ru">
+      <aside class="doc-toc">
+        <h2>Разделы</h2>
+        <ol>
+          <li><a href="#about">О приложении</a></li>
+          <li><a href="#install">Установка</a></li>
+          <li><a href="#sync-help">Синхронизация</a></li>
+          <li><a href="#notifications">Напоминания</a></li>
+          <li><a href="#delete-data">Удаление данных</a></li>
+          <li><a href="#faq">Частые вопросы</a></li>
+          <li><a href="#contact">Связаться</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body" id="doc-body">
+        <h2 id="about">О приложении</h2>
+        <p>Todo Calendar — приложение для личных задач: списки и подзадачи, календарь (год, месяц, неделя, день), канбан-доски, заметки с шифрованием, ежедневные дела, трекер привычек и ежегодные даты. Работает офлайн, синхронизируется через Google Drive пользователя.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <tbody>
+              <tr><th>Название</th><td>Todo Calendar</td></tr>
+              <tr><th>Пакет</th><td><code>com.crazyrabbit.todo</code></td></tr>
+              <tr><th>Версия</th><td>1.0.1</td></tr>
+              <tr><th>Платформы</th><td>Android 6.0+, Windows 10/11 (x64), Linux (x64)</td></tr>
+              <tr><th>Языки интерфейса</th><td>Русский, English</td></tr>
+              <tr><th>Цена</th><td>Бесплатно, без рекламы, подписок и встроенных покупок</td></tr>
+              <tr><th>Разработчик</th><td>tichdog · <a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a></td></tr>
+              <tr><th>Данные</th><td>Хранятся на устройстве; при включённой синхронизации — в вашем Google Drive</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="install">Установка</h2>
+        <h3>Android</h3>
+        <ol>
+          <li>Скачайте APK со <a href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Android.apk">страницы последнего релиза</a>.</li>
+          <li>Откройте файл. Android спросит разрешение на установку из этого источника — разрешите его только для браузера или проводника, из которого ставите.</li>
+          <li>После установки разрешение можно отозвать в настройках.</li>
+        </ol>
+        <p class="muted">Если приложение уже установлено, новая сборка обновится поверх, данные сохранятся. Удаление приложения удаляет локальные данные — заранее сделайте экспорт.</p>
+
+        <h3>Windows</h3>
+        <ol>
+          <li>Скачайте архив <code>ToDo_Windows_x64.zip</code> и распакуйте его в постоянную папку.</li>
+          <li>Запустите <code>ToDo.exe</code>. Установщик не требуется.</li>
+          <li>Для напоминаний приложение должно быть запущено. Быструю заметку можно добавить в автозапуск в настройках.</li>
+        </ol>
+
+        <h3>Linux</h3>
+        <ol>
+          <li>Скачайте <code>ToDo_Linux_x64.tar.gz</code> и распакуйте архив.</li>
+          <li>Запустите файл <code>./ToDo</code> из папки сборки.</li>
+          <li>Если не хватает системных библиотек, установите их средствами дистрибутива (GTK 3, libsecret).</li>
+        </ol>
+
+        <h2 id="sync-help">Синхронизация</h2>
+        <p>Синхронизация включается после входа через Google. Приложение хранит снапшот в собственной приватной папке в Google Drive (<code>appDataFolder</code>), поэтому файл не виден в «Моём диске» — это ожидаемое поведение, а не ошибка.</p>
+        <ul>
+          <li>Изменения на двух устройствах сливаются по времени последней правки: более свежая версия задачи побеждает.</li>
+          <li>Если Drive недоступен, приложение продолжает работать локально, а очередь синхронизации отправится позже.</li>
+          <li>В гостевом режиме синхронизации нет: данные остаются только на устройстве.</li>
+          <li>Чтобы подтянуть изменения с другого устройства, откройте приложение или нажмите «Синхронизировать» в меню аккаунта.</li>
+        </ul>
+
+        <h2 id="notifications">Напоминания</h2>
+        <ul>
+          <li><b>Android:</b> уведомления планируются системой и переживают перезагрузку. Нужны разрешения на уведомления и точные будильники; на устройствах Xiaomi, Huawei и Samsung дополнительно отключите оптимизацию батареи для приложения.</li>
+          <li><b>Windows и Linux:</b> напоминания работают на таймерах внутри запущенного приложения. Если окно закрыто, уведомление не придёт.</li>
+          <li>Проверить доступ можно тестовым уведомлением в настройках напоминаний.</li>
+        </ul>
+
+        <h2 id="delete-data">Удаление данных</h2>
+        <p>Разработчик не хранит ваши данные, поэтому удаление выполняется на устройстве и в вашем аккаунте Google.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Что удалить</th><th>Как</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Все данные приложения, включая копию в Google Drive</td>
+                <td>Аккаунт → Данные → «Удалить все данные» → подтверждение в диалоге и вводом слова</td>
+              </tr>
+              <tr>
+                <td>Только локальные данные (если Drive недоступен)</td>
+                <td>Тот же пункт: приложение предложит очистку только на этом устройстве и предупредит, что облачная копия останется</td>
+              </tr>
+              <tr>
+                <td>Облачная копия без доступа к приложению</td>
+                <td>Отозвать доступ приложения к аккаунту на <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> — файлы в <code>appDataFolder</code> удаляются вместе с доступом</td>
+              </tr>
+              <tr>
+                <td>Одна задача</td>
+                <td>Удаление в корзину, затем «Очистить корзину»</td>
+              </tr>
+              <tr>
+                <td>Скрытые заметки</td>
+                <td>Аккаунт → Безопасность заметок → сброс защиты (удаляет доступ к зашифрованным заметкам)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <p><b>Перед удалением.</b> Если данные ещё могут понадобиться, сохраните резервную копию: «Аккаунт → Данные → Экспорт». Файл JSON можно импортировать обратно в приложение.</p>
+        </div>
+
+        <h2 id="faq">Частые вопросы</h2>
+        <div class="faq">
+          <details>
+            <summary>Приложение не видит аккаунт Google при входе</summary>
+            <p>Проверьте интернет и системное время: неверные часы ломают OAuth. На Android убедитесь, что в системе добавлен хотя бы один Google-аккаунт. Если вход всё равно не проходит, приложение продолжит работать в гостевом режиме — данные не потеряются.</p>
+          </details>
+          <details>
+            <summary>После обновления пропали задачи</summary>
+            <p>Проверьте вкладку «Корзина» и фильтры: возможно, включён тег или поиск. Если данные были синхронизированы, нажмите «Синхронизировать» — снапшот в Drive содержит последнюю версию.</p>
+          </details>
+          <details>
+            <summary>Забыл пароль от скрытых заметок</summary>
+            <p>Восстановление невозможно: ключ шифрования не хранится ни на сервере, ни в облаке в открытом виде. В настройках безопасности заметок можно сбросить защиту — скрытые заметки будут удалены, остальные данные останутся.</p>
+          </details>
+          <details>
+            <summary>Синхронизация зависла или показывает ошибку</summary>
+            <p>Проверьте интернет и доступ к Drive, затем повторите синхронизацию. Если ошибка повторяется, посмотрите локальный файл <code>crash_log.txt</code> рядом с данными приложения и приложите его к сообщению об ошибке.</p>
+          </details>
+          <details>
+            <summary>Как перенести данные на новое устройство?</summary>
+            <p>Войдите в тот же Google-аккаунт и включите синхронизацию — задачи, заметки, доски и привычки подтянутся из Drive. Альтернатива без сети — экспорт JSON на старом устройстве и импорт на новом.</p>
+          </details>
+          <details>
+            <summary>Приложение замедляет телефон или садится батарея</summary>
+            <p>Активно используется только при открытом приложении; в фоне работают лишь запланированные уведомления. Если расход остаётся высоким, отключите автосинхронизацию по расписанию в настройках.</p>
+          </details>
+          <details>
+            <summary>Где код приложения?</summary>
+            <p>Исходный код приватный, но сборки и список изменений открыты в <a href="https://github.com/tichdog/ToDo_Release/releases/latest" rel="noopener">репозитории релизов</a>.</p>
+          </details>
+        </div>
+
+        <h2 id="contact">Связаться</h2>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>Сообщить об ошибке</h3>
+            <p>Опишите шаги, версию приложения и платформу. Приложите <code>crash_log.txt</code>, если он есть.</p>
+            <p style="margin-top:8px"><a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Вопросы и предложения</h3>
+            <p>Профиль разработчика: новости, релизы и обратная связь.</p>
+            <p style="margin-top:8px"><a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Правовые документы</h3>
+            <p>Как приложение обращается с данными и на каких условиях распространяется.</p>
+            <p style="margin-top:8px"><a href="../privacy/index.html">Политика конфиденциальности</a> · <a href="../terms/index.html">Условия использования</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Время ответа</h3>
+            <p>Обращения читаются вручную, обычно в течение нескольких дней. Данные пользователей разработчику недоступны, поэтому восстановить содержимое записей он не может.</p>
+          </div>
+        </div>
+
+        <div class="doc-foot">
+          <a class="btn btn--small" href="../privacy/index.html">Политика конфиденциальности</a>
+          <a class="btn btn--small btn--ghost" href="../terms/index.html">Условия использования</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ============ EN ============ -->
+    <div class="doc-lang" data-lang-block="en">
+      <aside class="doc-toc">
+        <h2>Sections</h2>
+        <ol>
+          <li><a href="#en-about">About the app</a></li>
+          <li><a href="#en-install">Installation</a></li>
+          <li><a href="#en-sync-help">Sync</a></li>
+          <li><a href="#en-notifications">Reminders</a></li>
+          <li><a href="#en-delete-data">Data deletion</a></li>
+          <li><a href="#en-faq">FAQ</a></li>
+          <li><a href="#en-contact">Contact</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body">
+        <h2 id="en-about">About the app</h2>
+        <p>Todo Calendar is a personal task app: lists and subtasks, a calendar (year, month, week, day), kanban boards, encrypted notes, daily routines, a habit tracker and annual dates. It works offline and syncs through the user's Google Drive.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <tbody>
+              <tr><th>Name</th><td>Todo Calendar</td></tr>
+              <tr><th>Package</th><td><code>com.crazyrabbit.todo</code></td></tr>
+              <tr><th>Version</th><td>1.0.1</td></tr>
+              <tr><th>Platforms</th><td>Android 6.0+, Windows 10/11 (x64), Linux (x64)</td></tr>
+              <tr><th>Languages</th><td>Russian, English</td></tr>
+              <tr><th>Price</th><td>Free, no ads, subscriptions or in-app purchases</td></tr>
+              <tr><th>Developer</th><td>tichdog · <a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a></td></tr>
+              <tr><th>Data</th><td>Stored on the device; with sync enabled, in your own Google Drive</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="en-install">Installation</h2>
+        <h3>Android</h3>
+        <ol>
+          <li>Download the APK from the <a href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Android.apk">latest release page</a>.</li>
+          <li>Open the file. Android will ask for permission to install from this source — allow it only for the browser or file manager you are using.</li>
+          <li>The permission can be revoked in settings afterwards.</li>
+        </ol>
+        <p class="muted">If the app is already installed, the new build updates in place and your data is kept. Uninstalling removes local data — export a backup first.</p>
+
+        <h3>Windows</h3>
+        <ol>
+          <li>Download <code>ToDo_Windows_x64.zip</code> and unpack it into a permanent folder.</li>
+          <li>Run <code>ToDo.exe</code>. No installer is required.</li>
+          <li>Reminders need the app to be running. Quick note can be added to autostart in settings.</li>
+        </ol>
+
+        <h3>Linux</h3>
+        <ol>
+          <li>Download <code>ToDo_Linux_x64.tar.gz</code> and unpack the archive.</li>
+          <li>Run <code>./ToDo</code> from the build folder.</li>
+          <li>If system libraries are missing, install them through your distribution (GTK 3, libsecret).</li>
+        </ol>
+
+        <h2 id="en-sync-help">Sync</h2>
+        <p>Sync turns on after signing in with Google. The app keeps its snapshot in its own private Google Drive folder (<code>appDataFolder</code>), so the file is not visible in “My Drive” — that is expected, not a bug.</p>
+        <ul>
+          <li>Changes from two devices are merged by last-modified time: the newer version of a task wins.</li>
+          <li>If Drive is unreachable, the app keeps working locally and the sync queue is sent later.</li>
+          <li>Guest mode has no sync: data stays on the device only.</li>
+          <li>To pull changes from another device, open the app or tap “Sync” in the account menu.</li>
+        </ul>
+
+        <h2 id="en-notifications">Reminders</h2>
+        <ul>
+          <li><b>Android:</b> notifications are scheduled by the system and survive a reboot. Notification and exact-alarm permissions are required; on Xiaomi, Huawei and Samsung devices also disable battery optimisation for the app.</li>
+          <li><b>Windows and Linux:</b> reminders are timers inside the running app. If the window is closed, the notification will not arrive.</li>
+          <li>A test notification in reminder settings verifies the permission.</li>
+        </ul>
+
+        <h2 id="en-delete-data">Data deletion</h2>
+        <p>The developer does not store your data, so deletion happens on your device and in your Google account.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>What to delete</th><th>How</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>All app data, including the Google Drive copy</td>
+                <td>Account → Data → Delete all data → confirm in the dialog and by typing the word</td>
+              </tr>
+              <tr>
+                <td>Local data only (if Drive is unreachable)</td>
+                <td>Same item: the app offers a device-only wipe and warns that the cloud copy remains</td>
+              </tr>
+              <tr>
+                <td>Cloud copy without the app</td>
+                <td>Revoke the app's access at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> — files in <code>appDataFolder</code> are deleted with the access</td>
+              </tr>
+              <tr>
+                <td>A single task</td>
+                <td>Delete to trash, then “Empty trash”</td>
+              </tr>
+              <tr>
+                <td>Hidden notes</td>
+                <td>Account → Notes security → reset protection (removes access to encrypted notes)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <p><b>Before deleting.</b> If you may need the data later, export a backup: Account → Data → Export. The JSON file can be imported back into the app.</p>
+        </div>
+
+        <h2 id="en-faq">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Google sign-in does not see my account</summary>
+            <p>Check the connection and the system clock: a wrong time breaks OAuth. On Android make sure at least one Google account is added to the system. If sign-in still fails, the app keeps working in guest mode and your data is safe.</p>
+          </details>
+          <details>
+            <summary>Tasks disappeared after an update</summary>
+            <p>Check the trash tab and the filters: a tag or a search may be active. If the data was synced, tap “Sync” — the Drive snapshot holds the latest version.</p>
+          </details>
+          <details>
+            <summary>I forgot the hidden notes password</summary>
+            <p>Recovery is impossible: the encryption key is stored neither on a server nor in the cloud in readable form. Notes security settings allow resetting the protection — hidden notes are removed, the rest of the data stays.</p>
+          </details>
+          <details>
+            <summary>Sync hangs or reports an error</summary>
+            <p>Check the connection and Drive access, then retry. If the error repeats, look at the local <code>crash_log.txt</code> next to the app data and attach it to your report.</p>
+          </details>
+          <details>
+            <summary>How do I move data to a new device?</summary>
+            <p>Sign in to the same Google account and enable sync — tasks, notes, boards and habits arrive from Drive. An offline alternative is JSON export on the old device and import on the new one.</p>
+          </details>
+          <details>
+            <summary>The app drains my battery</summary>
+            <p>Work happens only while the app is open; in the background only scheduled notifications run. If usage stays high, disable scheduled auto-sync in settings.</p>
+          </details>
+          <details>
+            <summary>Where is the source code?</summary>
+            <p>The source is private, but builds and changelogs are public in the <a href="https://github.com/tichdog/ToDo_Release/releases/latest" rel="noopener">releases repository</a>.</p>
+          </details>
+        </div>
+
+        <h2 id="en-contact">Contact</h2>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>Report a bug</h3>
+            <p>Describe the steps, app version and platform. Attach <code>crash_log.txt</code> if available.</p>
+            <p style="margin-top:8px"><a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Questions and ideas</h3>
+            <p>Developer profile: news, releases and feedback.</p>
+            <p style="margin-top:8px"><a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Legal documents</h3>
+            <p>How the app handles data and the terms it is distributed under.</p>
+            <p style="margin-top:8px"><a href="../privacy/index.html">Privacy policy</a> · <a href="../terms/index.html">Terms of use</a></p>
+          </div>
+          <div class="support-card">
+            <h3>Response time</h3>
+            <p>Reports are read manually, usually within a few days. The developer has no access to user data and therefore cannot restore the content of your records.</p>
+          </div>
+        </div>
+
+        <div class="doc-foot">
+          <a class="btn btn--small" href="../privacy/index.html">Privacy policy</a>
+          <a class="btn btn--small btn--ghost" href="../terms/index.html">Terms of use</a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year">2026</span> Todo Calendar · <code>com.crazyrabbit.todo</code></span>
+      <span>
+        <a href="../index.html" data-lang-block="ru">На главную</a>
+        <a href="../index.html" data-lang-block="en">Back to home</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

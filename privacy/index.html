@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика конфиденциальности — Todo Calendar</title>
+<meta name="description" content="Политика конфиденциальности Todo Calendar: данные хранятся на устройстве, синхронизация идёт только в приватную папку вашего Google Drive, аналитики и рекламы нет.">
+<meta name="theme-color" content="#0d2a47">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://tichdog.github.io/privacy/">
+<link rel="icon" href="../assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/app-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Политика конфиденциальности — Todo Calendar">
+<meta property="og:description" content="Что приложение хранит, куда передаёт и как удалить данные.">
+<meta property="og:url" content="https://tichdog.github.io/privacy/">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#doc-body">
+  <span data-lang-block="ru">Перейти к тексту</span>
+  <span data-lang-block="en">Skip to content</span>
+</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/app-icon.png" alt="" width="38" height="38">
+      <span>
+        Todo Calendar
+        <small>
+          <span data-lang-block="ru">Задачи · календарь · заметки</span>
+          <span data-lang-block="en">Tasks · calendar · notes</span>
+        </small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Навигация">
+      <a href="../index.html#features" data-lang-block="ru">Возможности</a>
+      <a href="index.html" data-lang-block="ru">Политика</a>
+      <a href="../terms/index.html" data-lang-block="ru">Условия</a>
+      <a href="../support/index.html" data-lang-block="ru">Поддержка</a>
+      <a href="../index.html#features-en" data-lang-block="en">Features</a>
+      <a href="index.html" data-lang-block="en">Privacy</a>
+      <a href="../terms/index.html" data-lang-block="en">Terms</a>
+      <a href="../support/index.html" data-lang-block="en">Support</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang-switch" role="group" aria-label="Язык / Language">
+        <button type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="icon-btn theme-toggle" type="button" data-toggle-theme aria-label="Тёмная тема" title="Тёмная тема">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" data-toggle-menu aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="doc-hero">
+    <div class="wrap">
+      <h1>
+        <span data-lang-block="ru">Политика конфиденциальности</span>
+        <span data-lang-block="en">Privacy Policy</span>
+      </h1>
+      <p class="lead" style="margin-bottom:0">
+        <span data-lang-block="ru">Todo Calendar — офлайн-first приложение для личных задач. Ниже описано, какие данные приложение хранит, в каких случаях обращается к Google и как их удалить.</span>
+        <span data-lang-block="en">Todo Calendar is an offline-first personal task app. Below is what data the app stores, when it talks to Google, and how to delete it.</span>
+      </p>
+      <div class="doc-meta">
+        <span class="badge">Todo Calendar · <code>com.crazyrabbit.todo</code></span>
+        <span class="badge">
+          <span data-lang-block="ru">Обновлено 16 ноября 2026 г.</span>
+          <span data-lang-block="en">Last updated November 16, 2026</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap doc-layout">
+
+    <!-- ============ RU ============ -->
+    <div class="doc-lang" data-lang-block="ru">
+      <aside class="doc-toc">
+        <h2>Содержание</h2>
+        <ol>
+          <li><a href="#summary">Кратко</a></li>
+          <li><a href="#who">Кто обрабатывает данные</a></li>
+          <li><a href="#local">Данные на устройстве</a></li>
+          <li><a href="#google">Google-аккаунт и Drive</a></li>
+          <li><a href="#permissions">Разрешения Android</a></li>
+          <li><a href="#notes">Скрытые заметки</a></li>
+          <li><a href="#no-tracking">Чего приложение не делает</a></li>
+          <li><a href="#retention">Хранение, экспорт и удаление</a></li>
+          <li><a href="#children">Дети</a></li>
+          <li><a href="#changes">Изменения политики</a></li>
+          <li><a href="#contact">Контакт</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body" id="doc-body">
+        <div class="doc-summary">
+          <p><b>Коротко.</b> Все задачи, заметки, привычки и настройки хранятся на вашем устройстве. У приложения нет собственных серверов: мы не собираем, не получаем и не анализируем ваши данные. Единственный облачный сервис — ваш собственный Google Drive, и только если вы вошли в аккаунт Google, чтобы включить синхронизацию.</p>
+        </div>
+
+        <h2 id="summary">1. Кратко</h2>
+        <ul>
+          <li>Данные хранятся локально на устройстве и доступны без интернета.</li>
+          <li>Приложение не отправляет данные разработчику или третьим лицам.</li>
+          <li>Нет аналитики, рекламы, трекинговых и крэш-репортинг SDK.</li>
+          <li>Вход через Google нужен только для синхронизации через ваш Drive.</li>
+          <li>Скрытые заметки шифруются на устройстве, ключ не покидает устройство.</li>
+          <li>Все данные можно удалить из приложения в пару шагов.</li>
+        </ul>
+
+        <h2 id="who">2. Кто обрабатывает данные</h2>
+        <p>Приложение Todo Calendar (пакет <code>com.crazyrabbit.todo</code>) разрабатывается и распространяется независимым разработчиком под именем <b>tichdog</b>. Оператором данных в смысле законодательства о персональных данных выступает сам пользователь: приложение работает на его устройстве и под его контролем.</p>
+        <p>У разработчика нет серверов, баз данных пользователей и доступа к их содержимому. Связаться можно по любому каналу, указанному в разделе <a href="#contact">«Контакт»</a>.</p>
+
+        <h2 id="local">3. Данные на устройстве</h2>
+        <p>В локальной базе SQLite и в настройках приложения хранятся:</p>
+        <ul>
+          <li>задачи, подзадачи, теги, приоритеты, даты и время;</li>
+          <li>заметки, в том числе скрытые (в зашифрованном виде);</li>
+          <li>канбан-доски, колонки и карточки;</li>
+          <li>ежедневные дела, привычки, листы-трекеры и ежегодные даты;</li>
+          <li>настройки интерфейса, тема, шрифты и наборы иконок;</li>
+          <li>служебные данные: идентификатор пользователя в приложении, очередь синхронизации, расписание напоминаний.</li>
+        </ul>
+        <p>Эти данные не передаются разработчику. Доступ к ним имеет только приложение на вашем устройстве и — при включённой синхронизации — ваш аккаунт Google.</p>
+        <p>Если приложение завершилось с ошибкой, текст ошибки записывается в локальный файл <code>crash_log.txt</code> рядом с данными приложения. Файл не отправляется автоматически и используется только для диагностики по вашей просьбе.</p>
+
+        <h2 id="google">4. Google-аккаунт и Google Drive</h2>
+        <p>Вход через Google — необязательный. Без него приложение работает в гостевом режиме и не выполняет сетевых запросов. При входе используются следующие данные и разрешения:</p>
+
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Что используется</th><th>Зачем</th><th>Куда передаётся</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Email аккаунта Google</td>
+                <td>Локальный идентификатор пользователя, чтобы данные разных аккаунтов на одном устройстве не смешивались</td>
+                <td>Никуда: хранится на устройстве</td>
+              </tr>
+              <tr>
+                <td>Область доступа <code>drive.appdata</code></td>
+                <td>Синхронизация снапшота с задачами, заметками и настройками</td>
+                <td>В приватную папку приложения в вашем Google Drive</td>
+              </tr>
+              <tr>
+                <td>Область доступа <code>userinfo.email</code></td>
+                <td>Отображение адреса вошедшего аккаунта в приложении</td>
+                <td>Никуда</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Файл синхронизации <code>todo_calendar_sync.json</code> и файл ассетов оформления лежат в папке <code>appDataFolder</code> — приватном хранилище, которое Google отдаёт только этому приложению. Эта папка не отображается в «Моём диске» и не видна другим приложениям. Данные находятся в вашем аккаунте Google и подчиняются <a href="https://policies.google.com/privacy" rel="noopener">политике конфиденциальности Google</a>.</p>
+
+        <div class="callout">
+          <p><b>Google API Services User Data Policy.</b> Использование приложением данных, полученных через Google API, соответствует <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, включая требования Limited Use. Данные Google используются исключительно для работы синхронизации внутри приложения; они не передаются третьим лицам, не используются для рекламы, аналитики или обучения моделей и не продаются.</p>
+        </div>
+
+        <p>Выйти из аккаунта можно в разделе «Аккаунт»; при выходе приложение перестаёт обращаться к Drive. Доступ можно отозвать полностью на странице <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</p>
+
+        <h2 id="permissions">5. Разрешения Android</h2>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Разрешение</th><th>Зачем нужно</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>INTERNET</code></td><td>Вход через Google и синхронизация с Google Drive. В гостевом режиме не используется.</td></tr>
+              <tr><td><code>POST_NOTIFICATIONS</code></td><td>Напоминания о задачах, ежедневных делах и ежегодных датах.</td></tr>
+              <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Точное время напоминаний. Без него уведомление может прийти с задержкой.</td></tr>
+              <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Восстановление расписания напоминаний после перезагрузки устройства.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Приложение не запрашивает доступ к контактам, камере, микрофону, точной геолокации, SMS, звонкам и файлам вне своего каталога. Разрешения на уведомления можно отозвать в настройках Android — напоминания при этом перестанут приходить, остальные функции продолжат работать.</p>
+
+        <h2 id="notes">6. Скрытые заметки</h2>
+        <p>Скрытые заметки шифруются на устройстве алгоритмом AES-256-GCM. Ключ выводится из вашего пароля или PIN через PBKDF2-HMAC-SHA256 с 200 000 итераций и хранится только в оперативной памяти текущей сессии; при сворачивании приложения заметки автоматически блокируются.</p>
+        <p>Если включена синхронизация, в Drive попадает зашифрованный блоб вместе с параметрами, необходимыми для расшифровки на другом устройстве. Пароль и производный ключ не передаются. Это значит, что содержимое скрытых заметок не может прочитать никто, включая разработчика, но и восстановить забытый пароль невозможно: предусмотрен только сброс защиты с потерей доступа к зашифрованным данным.</p>
+
+        <h2 id="no-tracking">7. Чего приложение не делает</h2>
+        <ul>
+          <li>Не собирает аналитику использования, статистику экранов, идентификаторы рекламы и устройства.</li>
+          <li>Не показывает рекламу и не содержит рекламных SDK.</li>
+          <li>Не передаёт данные третьим лицам, не продаёт и не обменивает их.</li>
+          <li>Не использует данные Google для рекламы, аналитики или обучения моделей.</li>
+          <li>Не запрашивает доступ к вашему Google Drive сверх папки <code>appDataFolder</code>.</li>
+        </ul>
+
+        <h2 id="retention">8. Хранение, экспорт и удаление</h2>
+        <p>Данные хранятся столько, сколько вы ими пользуетесь. Срок хранения определяется вами, а не разработчиком.</p>
+        <ul>
+          <li><b>Экспорт.</b> Резервную копию можно сохранить в JSON и при необходимости импортировать обратно.</li>
+          <li><b>Удаление всех данных.</b> «Аккаунт → Данные → Удалить все данные». Сначала удаляется копия снапшота в Google Drive и файл оформления, затем локальные записи, настройки, запланированные уведомления и локальные ассеты. Действие подтверждается дважды.</li>
+          <li><b>Если Drive недоступен.</b> Приложение предложит очистить только локальную копию и предупредит, что облачная останется.</li>
+          <li><b>Полный отзыв доступа.</b> Удалить облачную копию можно также, отозвав доступ приложения к аккаунту Google. Файлы в <code>appDataFolder</code> удаляются вместе с доступом.</li>
+          <li><b>Запрос разработчику.</b> У разработчика нет ваших данных, поэтому запрос на удаление не требуется — удаление выполняется на вашем устройстве и в вашем аккаунте Google.</li>
+        </ul>
+
+        <h2 id="children">9. Дети</h2>
+        <p>Приложение не предназначено для детей младше 13 лет и не собирает данные о них осознанно. Поскольку приложение не передаёт данные разработчику, специальных механизмов родительского согласия не требуется.</p>
+
+        <h2 id="changes">10. Изменения политики</h2>
+        <p>Политика может обновляться вместе с приложением. Дата последнего обновления указана в начале страницы; существенные изменения отражаются в списке изменений приложения. Продолжая пользоваться приложением после обновления, вы принимаете актуальную редакцию.</p>
+
+        <h2 id="contact">11. Контакт</h2>
+        <p>Вопросы о конфиденциальности, запросы и сообщения об ошибках: профиль <a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a>, страница поддержки — <a href="../support/index.html">tichdog.github.io/support</a>, сообщения о проблемах — <a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a>.</p>
+
+        <div class="doc-foot">
+          <a class="btn btn--small" href="../support/index.html">Поддержка</a>
+          <a class="btn btn--small btn--ghost" href="../terms/index.html">Условия использования</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ============ EN ============ -->
+    <div class="doc-lang" data-lang-block="en">
+      <aside class="doc-toc">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#en-summary">Summary</a></li>
+          <li><a href="#en-who">Who processes the data</a></li>
+          <li><a href="#en-local">Data on the device</a></li>
+          <li><a href="#en-google">Google account and Drive</a></li>
+          <li><a href="#en-permissions">Android permissions</a></li>
+          <li><a href="#en-notes">Hidden notes</a></li>
+          <li><a href="#en-no-tracking">What the app never does</a></li>
+          <li><a href="#en-retention">Retention, export and deletion</a></li>
+          <li><a href="#en-children">Children</a></li>
+          <li><a href="#en-changes">Policy changes</a></li>
+          <li><a href="#en-contact">Contact</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body">
+        <div class="doc-summary">
+          <p><b>In short.</b> All tasks, notes, habits and settings are stored on your device. The app has no servers of its own: we do not collect, receive or analyse your data. The only cloud service involved is your own Google Drive, and only if you sign in with Google to enable sync.</p>
+        </div>
+
+        <h2 id="en-summary">1. Summary</h2>
+        <ul>
+          <li>Data is stored locally and available without internet.</li>
+          <li>The app does not send data to the developer or to third parties.</li>
+          <li>No analytics, ads, tracking or crash-reporting SDKs.</li>
+          <li>Google sign-in is only needed to sync through your own Drive.</li>
+          <li>Hidden notes are encrypted on the device; the key never leaves it.</li>
+          <li>All data can be deleted from the app in a couple of steps.</li>
+        </ul>
+
+        <h2 id="en-who">2. Who processes the data</h2>
+        <p>Todo Calendar (package <code>com.crazyrabbit.todo</code>) is developed and distributed by an independent developer known as <b>tichdog</b>. In data-protection terms the user acts as the controller: the app runs on the user's device and under the user's control.</p>
+        <p>The developer has no servers, no user databases and no access to their content. Contact channels are listed in the <a href="#en-contact">Contact</a> section.</p>
+
+        <h2 id="en-local">3. Data on the device</h2>
+        <p>The local SQLite database and app preferences hold:</p>
+        <ul>
+          <li>tasks, subtasks, tags, priorities, dates and times;</li>
+          <li>notes, including hidden ones (encrypted);</li>
+          <li>kanban boards, columns and cards;</li>
+          <li>daily routines, habits, tracker sheets and annual dates;</li>
+          <li>interface settings, theme, fonts and icon sets;</li>
+          <li>service data: the in-app user identifier, the sync queue and the reminder schedule.</li>
+        </ul>
+        <p>This data is not transmitted to the developer. It is only accessible to the app on your device and, when sync is enabled, to your Google account.</p>
+        <p>If the app crashes, the error text is written to a local <code>crash_log.txt</code> file next to the app data. It is never sent automatically and is used only for diagnostics when you ask for help.</p>
+
+        <h2 id="en-google">4. Google account and Google Drive</h2>
+        <p>Signing in with Google is optional. Without it the app runs in guest mode and makes no network requests. When you sign in, the following data and scopes are used:</p>
+
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>What is used</th><th>Purpose</th><th>Where it goes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google account email</td>
+                <td>Local user identifier so that data of different accounts on one device stays separate</td>
+                <td>Nowhere: stored on the device</td>
+              </tr>
+              <tr>
+                <td><code>drive.appdata</code> scope</td>
+                <td>Syncing the snapshot with tasks, notes and settings</td>
+                <td>The app's private folder in your own Google Drive</td>
+              </tr>
+              <tr>
+                <td><code>userinfo.email</code> scope</td>
+                <td>Showing the signed-in address inside the app</td>
+                <td>Nowhere</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The sync file <code>todo_calendar_sync.json</code> and the appearance assets file live in <code>appDataFolder</code>, a private storage Google exposes only to this app. It is not shown in “My Drive” and not visible to other apps. The data stays in your Google account and is covered by <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
+
+        <div class="callout">
+          <p><b>Google API Services User Data Policy.</b> The app's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Google data is used solely to make sync work inside the app; it is not transferred to third parties, not used for advertising, analytics or model training, and not sold.</p>
+        </div>
+
+        <p>You can sign out in the Account section; the app then stops talking to Drive. Access can be revoked completely at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</p>
+
+        <h2 id="en-permissions">5. Android permissions</h2>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Permission</th><th>Why it is needed</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>INTERNET</code></td><td>Google sign-in and Google Drive sync. Not used in guest mode.</td></tr>
+              <tr><td><code>POST_NOTIFICATIONS</code></td><td>Reminders for tasks, daily routines and annual dates.</td></tr>
+              <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Exact reminder times. Without it notifications may arrive late.</td></tr>
+              <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Restoring the reminder schedule after a device reboot.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The app does not request contacts, camera, microphone, precise location, SMS, phone calls or files outside its own directory. Notification permission can be revoked in Android settings; reminders will stop, everything else keeps working.</p>
+
+        <h2 id="en-notes">6. Hidden notes</h2>
+        <p>Hidden notes are encrypted on the device with AES-256-GCM. The key is derived from your password or PIN using PBKDF2-HMAC-SHA256 with 200,000 iterations and lives only in the memory of the current session; notes are locked automatically when the app goes to the background.</p>
+        <p>With sync enabled, Drive receives the encrypted blob together with the parameters needed to decrypt it on another device. The password and the derived key are never transmitted. As a result nobody, including the developer, can read hidden notes — but a forgotten password cannot be recovered either. Only a security reset that discards access to encrypted data is available.</p>
+
+        <h2 id="en-no-tracking">7. What the app never does</h2>
+        <ul>
+          <li>It does not collect usage analytics, screen statistics, advertising or device identifiers.</li>
+          <li>It does not show ads and contains no advertising SDKs.</li>
+          <li>It does not share, sell or trade data with third parties.</li>
+          <li>It does not use Google data for advertising, analytics or model training.</li>
+          <li>It never requests access to your Google Drive beyond <code>appDataFolder</code>.</li>
+        </ul>
+
+        <h2 id="en-retention">8. Retention, export and deletion</h2>
+        <p>Data is kept for as long as you use it. The retention period is set by you, not by the developer.</p>
+        <ul>
+          <li><b>Export.</b> A backup can be saved as JSON and imported back when needed.</li>
+          <li><b>Delete all data.</b> Account → Data → Delete all data. The Drive snapshot and appearance file are removed first, then local records, settings, scheduled notifications and local assets. The action asks for confirmation twice.</li>
+          <li><b>If Drive is unreachable.</b> The app offers to clear the local copy only and warns that the cloud copy will remain.</li>
+          <li><b>Full revocation.</b> The cloud copy can also be removed by revoking the app's access to your Google account; files in <code>appDataFolder</code> are deleted together with the access.</li>
+          <li><b>Requests to the developer.</b> The developer holds none of your data, so no deletion request is needed — deletion happens on your device and in your Google account.</li>
+        </ul>
+
+        <h2 id="en-children">9. Children</h2>
+        <p>The app is not intended for children under 13 and does not knowingly collect data about them. Because no data is sent to the developer, no special parental consent mechanism is required.</p>
+
+        <h2 id="en-changes">10. Policy changes</h2>
+        <p>This policy may be updated together with the app. The last-updated date is shown at the top of the page; significant changes are reflected in the app's changelog. Continued use after an update means you accept the current version.</p>
+
+        <h2 id="en-contact">11. Contact</h2>
+        <p>Privacy questions, requests and bug reports: the <a href="https://github.com/tichdog" rel="noopener">github.com/tichdog</a> profile, the <a href="../support/index.html">support page</a>, or <a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a>.</p>
+
+        <div class="doc-foot">
+          <a class="btn btn--small" href="../support/index.html">Support</a>
+          <a class="btn btn--small btn--ghost" href="../terms/index.html">Terms of use</a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© <span id="year">2026</span> Todo Calendar · <code>com.crazyrabbit.todo</code></span>
+      <span>
+        <a href="../index.html" data-lang-block="ru">На главную</a>
+        <a href="../index.html" data-lang-block="en">Back to home</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todo Calendar — офлайн-first менеджер задач для Android, Windows и Linux</title>
+<meta name="description" content="Todo Calendar — задачи, календарь, канбан-доски, заметки, ежедневные дела и привычки в одном приложении. Работает офлайн, синхронизируется через ваш Google Drive, без рекламы и трекеров.">
+<meta name="theme-color" content="#0d2a47">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://tichdog.github.io/">
+<link rel="icon" href="assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/app-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Todo Calendar">
+<meta property="og:title" content="Todo Calendar — задачи, календарь и заметки в одном месте">
+<meta property="og:description" content="Офлайн-first менеджер задач для Android, Windows и Linux. Данные на устройстве, синхронизация через ваш Google Drive, без рекламы и аналитики.">
+<meta property="og:url" content="https://tichdog.github.io/">
+<meta property="og:image" content="https://tichdog.github.io/assets/img/app-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Todo Calendar",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Android, Windows, Linux",
+  "description": "Офлайн-first менеджер задач: задачи, календарь, канбан, заметки, ежедневные дела и привычки. Синхронизация через Google Drive.",
+  "url": "https://tichdog.github.io/",
+  "image": "https://tichdog.github.io/assets/img/app-icon.png",
+  "softwareVersion": "1.0.1",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+  "downloadUrl": "https://github.com/tichdog/ToDo_Release/releases/latest",
+  "inLanguage": ["ru", "en"]
+}
+</script>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">
+  <span data-lang-block="ru">Перейти к содержимому</span>
+  <span data-lang-block="en">Skip to content</span>
+</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/app-icon.png" alt="" width="38" height="38">
+      <span>
+        Todo Calendar
+        <small>
+          <span data-lang-block="ru">Задачи · календарь · заметки</span>
+          <span data-lang-block="en">Tasks · calendar · notes</span>
+        </small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="site-nav" aria-label="Навигация">
+      <a href="#features" data-lang-block="ru">Возможности</a>
+      <a href="#privacy" data-lang-block="ru">Приватность</a>
+      <a href="#sync" data-lang-block="ru">Синхронизация</a>
+      <a href="#download" data-lang-block="ru">Скачать</a>
+      <a href="support/index.html" data-lang-block="ru">Поддержка</a>
+      <a href="#features-en" data-lang-block="en">Features</a>
+      <a href="#privacy-en" data-lang-block="en">Privacy</a>
+      <a href="#sync-en" data-lang-block="en">Sync</a>
+      <a href="#download-en" data-lang-block="en">Download</a>
+      <a href="support/index.html" data-lang-block="en">Support</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang-switch" role="group" aria-label="Язык / Language">
+        <button type="button" data-set-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="icon-btn theme-toggle" type="button" data-toggle-theme aria-label="Тёмная тема" title="Тёмная тема">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" data-toggle-menu aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= RU ================= -->
+  <div data-lang-block="ru">
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Офлайн-first менеджер задач</p>
+          <h1>Все дела и даты&nbsp;— <em>в одном спокойном месте</em></h1>
+          <p class="lead">Todo Calendar собирает задачи, календарь, канбан-доски, заметки, ежедневные дела и привычки в одно приложение. Работает без интернета, синхронизируется через ваш собственный Google Drive и не собирает данные о вас.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#download">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11.5M7.5 11 12 15.5 16.5 11"/><path d="M4.5 16.5v2.2c0 .8.6 1.3 1.4 1.3h12.2c.8 0 1.4-.5 1.4-1.3v-2.2"/></svg>
+              Скачать приложение
+            </a>
+            <a class="btn btn--ghost" href="#features">Посмотреть возможности</a>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Android · Windows · Linux</span>
+            <span class="badge badge--ok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 5 6v6c0 4 3 7 7 8.4 4-1.4 7-4.4 7-8.4V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+              Без рекламы и трекеров
+            </span>
+            <span class="badge">Бесплатно</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="app-tile">
+            <img src="assets/img/app-icon.png" alt="" width="300" height="300">
+          </div>
+
+          <div class="float-card float-card--tasks">
+            <div class="mini-title"><span>Сегодня</span><span>3</span></div>
+            <div class="mini-task">
+              <span class="dot dot--orange">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              </span>
+              <span>Позвонить в клинику</span>
+            </div>
+            <div class="mini-task">
+              <span class="dot dot--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/></svg>
+              </span>
+              <span>Черновик отчёта</span>
+            </div>
+            <div class="mini-task mini-task--done">
+              <span class="dot dot--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              </span>
+              <span>Полить цветы</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--cal">
+            <div class="mini-title"><span>Неделя</span><span>12</span></div>
+            <div class="mini-cal">
+              <span></span><span class="is-soft"></span><span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span>
+              <span class="is-on"></span><span></span><span class="is-on"></span><span></span><span class="is-soft"></span><span></span><span class="is-on"></span>
+              <span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span>
+            </div>
+          </div>
+
+          <span class="float-pill float-pill--lock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5"/></svg>
+            Заметки зашифрованы
+          </span>
+          <span class="float-pill float-pill--sync">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/><path d="M9.2 13.4a3.2 3.2 0 0 1 5-1.4M15 12.4a3.2 3.2 0 0 1-5 1.4"/></svg>
+            Синхронизировано
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Коротко о приложении">
+      <div class="wrap strip-inner">
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="4.8" width="16.4" height="14.4" rx="3"/><path d="M7.2 9.6h9.6M7.2 14.2h6"/></svg>
+          <span>Данные хранятся на устройстве</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5"/></svg>
+          <span>Заметки шифруются на устройстве</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/></svg>
+          <span>Синхронизация только в ваш Drive</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11.5M7.5 11 12 15.5 16.5 11"/><path d="M4.5 16.5v2.2c0 .8.6 1.3 1.4 1.3h12.2c.8 0 1.4-.5 1.4-1.3v-2.2"/></svg>
+          <span>Экспорт JSON и удаление в пару шагов</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Возможности</p>
+          <h2>Один инструмент вместо шести приложений</h2>
+          <p>Списки, календарь, доски, заметки и трекеры живут в одной базе: задача, созданная в календаре, сразу видна в списке, в поиске и на виджете.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card card--wide">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.4" width="16" height="15" rx="2.6"/><path d="M8.2 11h7.6M8.2 15.4h7.6"/></svg>
+            </span>
+            <h3>Задачи, которые не теряются</h3>
+            <p>Вкладки «Сегодня», «Завтра», «Неделя», «Всё», «Выполненные», «Просроченные» и корзина с восстановлением. Теги, приоритеты, дедлайны, длительность и подзадачи — в одном диалоге.</p>
+            <div class="card-tags">
+              <span class="tag">Инбокс и сегодня</span>
+              <span class="tag">Подзадачи</span>
+              <span class="tag">Приоритеты</span>
+              <span class="tag">Корзина</span>
+            </div>
+            <div class="card-art" aria-hidden="true">
+              <div class="mini-task">
+                <span class="dot dot--orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                <span>Сдать отчёт до 18:00</span>
+              </div>
+              <div class="mini-task">
+                <span class="dot dot--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/></svg></span>
+                <span>Купить билеты · завтра</span>
+              </div>
+              <div class="mini-task mini-task--done">
+                <span class="dot dot--teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                <span>Записаться к врачу</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="5.8" width="16.4" height="14.4" rx="2.6"/><path d="M3.8 10.2h16.4"/><path d="M8 3.7v3.4M16 3.7v3.4"/><circle cx="8.2" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="8.2" cy="17.2" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="17.2" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="17.2" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>Календарь на любой масштаб</h3>
+            <p>Год, месяц, неделя и день. Задачи встают блоками по времени, ежегодные даты — дни рождения и годовщины — видны отдельно от задач, а новую задачу можно создать прямо в сетке.</p>
+            <div class="card-tags">
+              <span class="tag">Год</span>
+              <span class="tag">Месяц</span>
+              <span class="tag">Неделя</span>
+              <span class="tag">День</span>
+            </div>
+            <div class="card-art" aria-hidden="true">
+              <div class="mini-cal">
+                <span></span><span class="is-soft"></span><span></span><span></span><span class="is-on"></span><span></span><span class="is-soft"></span>
+                <span class="is-on"></span><span></span><span class="is-on"></span><span></span><span></span><span class="is-on"></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="4.4" width="4.8" height="15.2" rx="1.8"/><rect x="9.6" y="4.4" width="4.8" height="15.2" rx="1.8"/><rect x="15.6" y="4.4" width="4.8" height="15.2" rx="1.8"/></svg>
+            </span>
+            <h3>Канбан-доски</h3>
+            <p>Несколько досок с вкладками как в браузере. Карточки перетаскиваются между колонками и переносятся на другую доску, а закрытые доски не возвращаются из синхронизации.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="kanban-mini">
+                <div class="kanban-col"><b></b><i></i><i></i></div>
+                <div class="kanban-col"><b></b><i></i><i></i></div>
+                <div class="kanban-col"><b></b><i></i></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.6h14v9.4l-5.4 5.4H5Z"/><path d="M13.6 19.4v-5.4H19"/><path d="M5 4.6h6.2"/></svg>
+            </span>
+            <h3>Заметки под замком</h3>
+            <p>Форматированный редактор с картинками и закреплением. Скрытые заметки шифруются AES-256-GCM: ключ выводится из вашего пароля и не покидает устройство.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="notes-mini"><i></i><i></i><i></i></div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 9.4a7.2 7.2 0 0 1 12.2-2.2M18.6 4.6v3.6h-3.6"/><path d="M18.6 14.6a7.2 7.2 0 0 1-12.2 2.2M5.4 19.4v-3.6h3.6"/></svg>
+            </span>
+            <h3>Ежедневные дела</h3>
+            <p>Повторяющиеся ритуалы с отметками по дням и напоминанием на каждый день — от зарядки до вечернего планирования.</p>
+            <div class="card-tags">
+              <span class="tag">Каждый день</span>
+              <span class="tag">Напоминание</span>
+            </div>
+          </article>
+
+          <article class="card card--half">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="3.8" width="7.2" height="7.2" rx="3"/><rect x="13" y="3.8" width="7.2" height="7.2" rx="3"/><rect x="3.8" y="13" width="7.2" height="7.2" rx="3"/><rect x="13" y="13" width="7.2" height="7.2" rx="3"/></svg>
+            </span>
+            <h3>Привычки и «Лист»</h3>
+            <p>Сетки от 7 до 90 дней с сериями и защитой прошлых дней. Режим «Лист» — свободный холст, где одна клетка равна одному действию: подтягиванию, стакану воды, странице книги.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="habits-mini">
+                <span></span><span class="on-1"></span><span></span><span class="on-2"></span><span></span><span class="on-1"></span><span class="on-2"></span><span></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-2"></span><span class="on-1"></span>
+                <span class="on-1"></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-1"></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-1"></span><span class="on-2"></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--half">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 17v-4.4a4.8 4.8 0 0 1 9.6 0V17l1.4 1.6H5.8Z"/><path d="M10.2 20.2a1.8 1.8 0 0 0 3.6 0"/><path d="M3.8 8.2 2.6 6.6M20.2 8.2l1.2-1.6M2.6 12.6h1.8M19.6 12.6h1.8"/></svg>
+            </span>
+            <h3>Напоминания и виджеты</h3>
+            <p>Локальные уведомления с настраиваемым запасом времени. На Android они планируются системой и переживают перезагрузку, а виджеты «Задачи на сегодня» и «Быстрая заметка» живут на домашнем экране.</p>
+            <div class="card-tags">
+              <span class="tag">Напоминания</span>
+              <span class="tag">Виджеты Android</span>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.4" cy="10.4" r="6.4"/><path d="M15.2 15.2 20.6 20.6"/><path d="M7.4 11.6c.4.8 1.4 1.4 3 1.4s2.6-.6 3-1.4"/></svg>
+            </span>
+            <h3>Поиск по всему</h3>
+            <p>Один запрос ищет задачи, теги, заметки, ежедневные дела, привычки, листы и карточки канбана — и ведёт сразу к нужному экрану.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.8c4.8 0 8.6 3.4 8.6 7.6 0 2.4-1.9 3.7-3.9 3.4-1.8-.3-2.6.9-2.2 2.4.4 1.7-.8 3-2.5 3-4.8 0-8.6-3.6-8.6-8.2S7.2 3.8 12 3.8Z"/><circle cx="8" cy="9" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="7.4" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="9.4" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>Внешний вид под себя</h3>
+            <p>Пресеты, светлая и тёмная тема, свои шрифты и SVG-наборы иконок, плотность, радиусы и масштаб текста. Тема переносится файлом на другое устройство.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.6h14v9.4l-5.4 5.4H5Z"/><path d="M13.6 19.4v-5.4H19"/><path d="M9.2 13.9c-1.1 0-1.9-.6-1.9-1.3 0-.6.8-1 1.9-1s1.9.4 1.9 1c0 .7-.8 1.3-1.9 1.3Z"/></svg>
+            </span>
+            <h3>Быстрая заметка на ПК</h3>
+            <p>Отдельное окно-стикер поверх других окон с автосохранением черновика. В заметки текст попадает по кнопке — случайная мысль не потеряется, но и не засорит список.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Приватность</p>
+          <h2>Данные не уходят никуда, кроме вашего Drive</h2>
+          <p class="lead">У проекта нет серверов, аналитики и рекламных SDK: приложению просто некуда отправлять ваши записи кроме вашего же облака.</p>
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Всё хранится локально</b>Задачи, заметки, привычки, доски и настройки лежат в базе на устройстве и доступны без интернета.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Скрытые заметки зашифрованы</b>AES-256-GCM, ключ из пароля через PBKDF2-HMAC-SHA256 (200 000 итераций). Ключ живёт только в памяти сессии и блокируется при сворачивании приложения.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Google нужен только для входа и Drive</b>Приложение получает email аккаунта как идентификатор и доступ к приватной папке данных приложения в Drive. Больше ничего.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Ничего не продаётся и не отслеживается</b>Нет аналитики, крэш-репортов, рекламы и трекинговых SDK. Гостевой режим вообще не создаёт сетевых запросов.</span>
+            </li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="privacy/index.html">Политика конфиденциальности</a>
+            <a class="btn btn--ghost" href="terms/index.html">Условия использования</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Коротко для Google Play</h3>
+          <p class="muted" style="font-size:.9rem">Как приложение обращается с данными — те же ответы мы даём в форме Data safety.</p>
+          <div class="table-scroll">
+            <table class="data">
+              <thead>
+                <tr><th>Данные</th><th>Что происходит</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Email аккаунта Google</td><td>Получаем при входе, используем как идентификатор пользователя на устройстве</td></tr>
+                <tr><td>Задачи, заметки, привычки</td><td>Хранятся на устройстве; при синхронизации — в вашем Google Drive</td></tr>
+                <tr><td>Аналитика и реклама</td><td>Не собираются</td></tr>
+                <tr><td>Передача третьим лицам</td><td>Отсутствует</td></tr>
+                <tr><td>Удаление данных</td><td>В приложении: «Аккаунт → Данные → Удалить все данные»</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sync">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Синхронизация</p>
+          <h2>Ваше облако, а не наше</h2>
+          <p>Файл снапшота лежит в приватной папке приложения в Google Drive. В «Моём диске» её не видно, и никто кроме вашего аккаунта к ней не имеет доступа.</p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="4.8" width="16.4" height="14.4" rx="3"/><path d="M7.2 9.6h9.6M7.2 14.2h6"/></svg>
+            <b>Устройство</b>
+            Задачи, теги, заметки, доски и настройки
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M14 6.5 19.5 12 14 17.5"/></svg></div>
+          <div class="flow-node flow-node--cloud">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/><path d="M9.2 13.4a3.2 3.2 0 0 1 5-1.4M15 12.4a3.2 3.2 0 0 1-5 1.4"/></svg>
+            <b>Ваш Google Drive</b>
+            Приватная папка <code>appDataFolder</code>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M14 6.5 19.5 12 14 17.5"/></svg></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="3.6" width="11.2" height="16.8" rx="2.6"/><path d="M10.4 6.4h3.2"/><path d="M10.6 17.6h2.8"/></svg>
+            <b>Второе устройство</b>
+            Подтянет изменения при запуске и возврате в приложение
+          </div>
+        </div>
+
+        <div class="panel panel--soft" style="margin-top:28px">
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Побеждает более свежая версия</b>Задачи и теги сливаются по <code>updatedAt</code>: правки с телефона и компьютера не затирают друг друга.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Удалённое не воскресает</b>Корзина и закрытые доски хранят надгробия, поэтому удалённые записи не возвращаются с другого устройства.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Синхронизируется всё</b>Задачи, теги, заметки с ключами безопасности, канбан, привычки, ежегодные даты и оформление.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Без входа — без сети</b>В гостевом режиме изменения остаются только на устройстве: очередь синхронизации не создаётся.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Скачать</p>
+          <h2>Android, Windows и Linux</h2>
+          <p>Сборки публикуются в открытом репозитории релизов — код приложения остаётся приватным. Все версии и список изменений доступны на странице релизов.</p>
+        </div>
+
+        <div class="platforms">
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="2.8" width="11.2" height="18.4" rx="2.8"/><path d="M10.6 5.6h2.8"/><path d="M10.8 18.4h2.4"/></svg>
+              <h3>Android</h3>
+            </div>
+            <p>APK для телефона и планшета. Виджеты «Задачи на сегодня» и «Быстрая заметка», системные напоминания.</p>
+            <a class="btn btn--primary btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Android.apk">Скачать APK</a>
+            <p class="platform-note">Android 6.0 и новее · при установке разрешите установку из этого источника</p>
+          </div>
+
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4.4" width="18.4" height="12" rx="2.2"/><path d="M9 20h6M12 16.4V20"/></svg>
+              <h3>Windows</h3>
+            </div>
+            <p>ZIP-архив x64: распакуйте и запустите <code>ToDo.exe</code>. Быстрая заметка, автозапуск и панель деталей рядом со списком.</p>
+            <a class="btn btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Windows_x64.zip">Скачать для Windows</a>
+            <p class="platform-note">Windows 10/11 · напоминания работают, пока приложение запущено</p>
+          </div>
+
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4.4" width="18.4" height="15.2" rx="2.4"/><path d="m6.4 9 2.6 2.6-2.6 2.6M12 15h5"/></svg>
+              <h3>Linux</h3>
+            </div>
+            <p>Архив x64: распакуйте и запустите <code>./ToDo</code>. Тот же редактор, канбан и трекеры привычек.</p>
+            <a class="btn btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Linux_x64.tar.gz">Скачать для Linux</a>
+            <p class="platform-note">x64 · на Wayland закрепление окна заметки зависит от композитора</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn--ghost" href="https://github.com/tichdog/ToDo_Release/releases/latest">
+            Все релизы и список изменений
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 4.6h6v6M19.4 4.6l-8.2 8.2"/><path d="M17 13.4v5.4H5V6.8h5.4"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Вопросы</p>
+          <h2>Коротко о главном</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Нужен ли аккаунт Google?</summary>
+            <p>Нет. В гостевом режиме всё хранится на устройстве, а сетевые запросы не выполняются вовсе. Вход нужен только для синхронизации между устройствами.</p>
+          </details>
+          <details>
+            <summary>Где лежат мои данные?</summary>
+            <p>В локальной базе SQLite на устройстве. При включённой синхронизации — ещё и в файле снапшота в приватной папке приложения (<code>appDataFolder</code>) вашего Google Drive. Доступа к этому файлу из «Моего диска» нет.</p>
+          </details>
+          <details>
+            <summary>Что будет, если я забуду пароль от скрытых заметок?</summary>
+            <p>Восстановить содержимое нельзя: ключ шифрования не хранится ни на одном сервере. В настройках можно сбросить защиту — это удалит доступ к уже зашифрованным заметкам, остальные данные останутся на месте.</p>
+          </details>
+          <details>
+            <summary>Как удалить все данные?</summary>
+            <p><b>Аккаунт → Данные → «Удалить все данные»</b>. Сначала удаляется копия снапшота в Google Drive и файл оформления, затем локальные записи, настройки и запланированные уведомления. Действие подтверждается дважды.</p>
+          </details>
+          <details>
+            <summary>Почему на Windows и Linux напоминания не приходят после закрытия окна?</summary>
+            <p>На десктопе напоминания работают на таймерах внутри процесса: приложение должно быть запущено. На Android уведомления планируются системой и переживают перезагрузку.</p>
+          </details>
+          <details>
+            <summary>Есть ли реклама, подписка или аналитика?</summary>
+            <p>Нет. Приложение бесплатное, без рекламы, встроенных покупок и трекинговых SDK.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Задачи на сегодня уже ждут в календаре</h2>
+          <p>Скачайте сборку для своей платформы. Если что-то не работает — напишите, мы читаем все обращения.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://github.com/tichdog/ToDo_Release/releases/latest">Скачать последнюю версию</a>
+            <a class="btn btn--ghost" href="support/index.html">Поддержка и удаление данных</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div data-lang-block="en">
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Offline-first task manager</p>
+          <h1>Every task and date&nbsp;— <em>in one calm place</em></h1>
+          <p class="lead">Todo Calendar brings tasks, calendar, kanban boards, notes, daily routines and habit trackers into one app. It works without internet, syncs through your own Google Drive and does not collect data about you.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#download-en">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11.5M7.5 11 12 15.5 16.5 11"/><path d="M4.5 16.5v2.2c0 .8.6 1.3 1.4 1.3h12.2c.8 0 1.4-.5 1.4-1.3v-2.2"/></svg>
+              Download the app
+            </a>
+            <a class="btn btn--ghost" href="#features-en">See what it does</a>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Android · Windows · Linux</span>
+            <span class="badge badge--ok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 5 6v6c0 4 3 7 7 8.4 4-1.4 7-4.4 7-8.4V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+              No ads, no trackers
+            </span>
+            <span class="badge">Free</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="app-tile">
+            <img src="assets/img/app-icon.png" alt="" width="300" height="300">
+          </div>
+
+          <div class="float-card float-card--tasks">
+            <div class="mini-title"><span>Today</span><span>3</span></div>
+            <div class="mini-task">
+              <span class="dot dot--orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+              <span>Call the clinic</span>
+            </div>
+            <div class="mini-task">
+              <span class="dot dot--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/></svg></span>
+              <span>Draft the report</span>
+            </div>
+            <div class="mini-task mini-task--done">
+              <span class="dot dot--teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+              <span>Water the plants</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--cal">
+            <div class="mini-title"><span>Week</span><span>12</span></div>
+            <div class="mini-cal">
+              <span></span><span class="is-soft"></span><span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span>
+              <span class="is-on"></span><span></span><span class="is-on"></span><span></span><span class="is-soft"></span><span></span><span class="is-on"></span>
+              <span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span><span class="is-on"></span><span></span>
+            </div>
+          </div>
+
+          <span class="float-pill float-pill--lock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5"/></svg>
+            Notes encrypted
+          </span>
+          <span class="float-pill float-pill--sync">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/><path d="M9.2 13.4a3.2 3.2 0 0 1 5-1.4M15 12.4a3.2 3.2 0 0 1-5 1.4"/></svg>
+            Synced
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="At a glance">
+      <div class="wrap strip-inner">
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="4.8" width="16.4" height="14.4" rx="3"/><path d="M7.2 9.6h9.6M7.2 14.2h6"/></svg>
+          <span>Your data stays on the device</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.6"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5"/></svg>
+          <span>Hidden notes are encrypted</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/></svg>
+          <span>Sync only to your own Drive</span>
+        </div>
+        <div class="strip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11.5M7.5 11 12 15.5 16.5 11"/><path d="M4.5 16.5v2.2c0 .8.6 1.3 1.4 1.3h12.2c.8 0 1.4-.5 1.4-1.3v-2.2"/></svg>
+          <span>JSON export and easy deletion</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features-en">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2>One tool instead of six apps</h2>
+          <p>Lists, calendar, boards, notes and trackers share one database: a task created in the calendar shows up in the list, in search and on the widget right away.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card card--wide">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5.4" width="16" height="15" rx="2.6"/><path d="M8.2 11h7.6M8.2 15.4h7.6"/></svg>
+            </span>
+            <h3>Tasks that never slip away</h3>
+            <p>Tabs for Today, Tomorrow, Week, All, Completed, Overdue and a restorable trash. Tags, priorities, deadlines, duration and subtasks live in a single dialog.</p>
+            <div class="card-tags">
+              <span class="tag">Today</span>
+              <span class="tag">Subtasks</span>
+              <span class="tag">Priorities</span>
+              <span class="tag">Trash</span>
+            </div>
+            <div class="card-art" aria-hidden="true">
+              <div class="mini-task">
+                <span class="dot dot--orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                <span>Send the report by 6 pm</span>
+              </div>
+              <div class="mini-task">
+                <span class="dot dot--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/></svg></span>
+                <span>Buy tickets · tomorrow</span>
+              </div>
+              <div class="mini-task mini-task--done">
+                <span class="dot dot--teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                <span>Book a doctor appointment</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--wide">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="5.8" width="16.4" height="14.4" rx="2.6"/><path d="M3.8 10.2h16.4"/><path d="M8 3.7v3.4M16 3.7v3.4"/><circle cx="8.2" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="14" r="0.7" fill="currentColor" stroke="none"/><circle cx="8.2" cy="17.2" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="17.2" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="17.2" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>A calendar at any scale</h3>
+            <p>Year, month, week and day. Tasks become time blocks, annual dates such as birthdays stay separate from tasks, and a new task can be created right inside the grid.</p>
+            <div class="card-tags">
+              <span class="tag">Year</span>
+              <span class="tag">Month</span>
+              <span class="tag">Week</span>
+              <span class="tag">Day</span>
+            </div>
+            <div class="card-art" aria-hidden="true">
+              <div class="mini-cal">
+                <span></span><span class="is-soft"></span><span></span><span></span><span class="is-on"></span><span></span><span class="is-soft"></span>
+                <span class="is-on"></span><span></span><span class="is-on"></span><span></span><span></span><span class="is-on"></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="4.4" width="4.8" height="15.2" rx="1.8"/><rect x="9.6" y="4.4" width="4.8" height="15.2" rx="1.8"/><rect x="15.6" y="4.4" width="4.8" height="15.2" rx="1.8"/></svg>
+            </span>
+            <h3>Kanban boards</h3>
+            <p>Several boards with browser-style tabs. Cards can be dragged between columns and moved to another board, and closed boards never come back from sync.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="kanban-mini">
+                <div class="kanban-col"><b></b><i></i><i></i></div>
+                <div class="kanban-col"><b></b><i></i><i></i></div>
+                <div class="kanban-col"><b></b><i></i></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.6h14v9.4l-5.4 5.4H5Z"/><path d="M13.6 19.4v-5.4H19"/><path d="M5 4.6h6.2"/></svg>
+            </span>
+            <h3>Notes under lock</h3>
+            <p>A rich text editor with images and pinning. Hidden notes are encrypted with AES-256-GCM: the key is derived from your password and never leaves the device.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="notes-mini"><i></i><i></i><i></i></div>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 9.4a7.2 7.2 0 0 1 12.2-2.2M18.6 4.6v3.6h-3.6"/><path d="M18.6 14.6a7.2 7.2 0 0 1-12.2 2.2M5.4 19.4v-3.6h3.6"/></svg>
+            </span>
+            <h3>Daily routines</h3>
+            <p>Repeating rituals with per-day check marks and a daily reminder — from a morning stretch to evening planning.</p>
+            <div class="card-tags">
+              <span class="tag">Every day</span>
+              <span class="tag">Reminders</span>
+            </div>
+          </article>
+
+          <article class="card card--half">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="3.8" width="7.2" height="7.2" rx="3"/><rect x="13" y="3.8" width="7.2" height="7.2" rx="3"/><rect x="3.8" y="13" width="7.2" height="7.2" rx="3"/><rect x="13" y="13" width="7.2" height="7.2" rx="3"/></svg>
+            </span>
+            <h3>Habits and the Sheet</h3>
+            <p>Grids from 7 to 90 days with streaks and protection for past days. The Sheet mode is a free canvas where one cell equals one action: a pull-up, a glass of water, a page read.</p>
+            <div class="card-art" aria-hidden="true">
+              <div class="habits-mini">
+                <span></span><span class="on-1"></span><span></span><span class="on-2"></span><span></span><span class="on-1"></span><span class="on-2"></span><span></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-2"></span><span class="on-1"></span>
+                <span class="on-1"></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-2"></span><span class="on-1"></span><span class="on-2"></span><span class="on-1"></span><span></span><span class="on-1"></span><span class="on-2"></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--half">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 17v-4.4a4.8 4.8 0 0 1 9.6 0V17l1.4 1.6H5.8Z"/><path d="M10.2 20.2a1.8 1.8 0 0 0 3.6 0"/><path d="M3.8 8.2 2.6 6.6M20.2 8.2l1.2-1.6M2.6 12.6h1.8M19.6 12.6h1.8"/></svg>
+            </span>
+            <h3>Reminders and widgets</h3>
+            <p>Local notifications with a configurable lead time. On Android they are scheduled by the system and survive a reboot, while the “Today's tasks” and “Quick note” widgets live on the home screen.</p>
+            <div class="card-tags">
+              <span class="tag">Reminders</span>
+              <span class="tag">Android widgets</span>
+            </div>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.4" cy="10.4" r="6.4"/><path d="M15.2 15.2 20.6 20.6"/><path d="M7.4 11.6c.4.8 1.4 1.4 3 1.4s2.6-.6 3-1.4"/></svg>
+            </span>
+            <h3>Search everywhere</h3>
+            <p>A single query looks through tasks, tags, notes, routines, habits, sheets and kanban cards — and takes you straight to the right screen.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.8c4.8 0 8.6 3.4 8.6 7.6 0 2.4-1.9 3.7-3.9 3.4-1.8-.3-2.6.9-2.2 2.4.4 1.7-.8 3-2.5 3-4.8 0-8.6-3.6-8.6-8.2S7.2 3.8 12 3.8Z"/><circle cx="8" cy="9" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="7.4" r="0.7" fill="currentColor" stroke="none"/><circle cx="15.8" cy="9.4" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>Looks the way you like</h3>
+            <p>Presets, light and dark themes, your own fonts and SVG icon sets, density, corner radii and text scale. A theme can be moved to another device as a file.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.6h14v9.4l-5.4 5.4H5Z"/><path d="M13.6 19.4v-5.4H19"/><path d="M9.2 13.9c-1.1 0-1.9-.6-1.9-1.3 0-.6.8-1 1.9-1s1.9.4 1.9 1c0 .7-.8 1.3-1.9 1.3Z"/></svg>
+            </span>
+            <h3>Desktop quick note</h3>
+            <p>A separate sticky window on top of other windows that autosaves the draft. The text goes into your notes only when you press the button — a random thought is never lost and never clutters the list.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy-en">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Privacy</p>
+          <h2>Data goes nowhere but your own Drive</h2>
+          <p class="lead">The project has no servers, analytics or ad SDKs: there is simply nowhere to send your records except your own cloud.</p>
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Everything is stored locally</b>Tasks, notes, habits, boards and settings live in a database on your device and work without internet.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Hidden notes are encrypted</b>AES-256-GCM with a key derived through PBKDF2-HMAC-SHA256 (200,000 iterations). The key lives only in session memory and is locked when the app goes to the background.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Google is used only for sign-in and Drive</b>The app receives your account email as an identifier and access to its own private app-data folder in your Drive. Nothing else.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Nothing is sold or tracked</b>No analytics, crash reporting, advertising or tracking SDKs. Guest mode makes no network requests at all.</span>
+            </li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="privacy/index.html">Privacy policy</a>
+            <a class="btn btn--ghost" href="terms/index.html">Terms of use</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Short version for Google Play</h3>
+          <p class="muted" style="font-size:.9rem">How the app treats data — the same answers we give in the Data safety form.</p>
+          <div class="table-scroll">
+            <table class="data">
+              <thead>
+                <tr><th>Data</th><th>What happens</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Google account email</td><td>Received at sign-in, used as the local user identifier</td></tr>
+                <tr><td>Tasks, notes, habits</td><td>Stored on the device; with sync enabled, in your own Google Drive</td></tr>
+                <tr><td>Analytics and ads</td><td>Not collected</td></tr>
+                <tr><td>Sharing with third parties</td><td>None</td></tr>
+                <tr><td>Data deletion</td><td>In the app: Account → Data → Delete all data</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sync-en">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Sync</p>
+          <h2>Your cloud, not ours</h2>
+          <p>The snapshot file lives in the app's private Google Drive folder. It is not visible in “My Drive”, and nobody but your account can reach it.</p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="4.8" width="16.4" height="14.4" rx="3"/><path d="M7.2 9.6h9.6M7.2 14.2h6"/></svg>
+            <b>Device</b>
+            Tasks, tags, notes, boards and settings
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M14 6.5 19.5 12 14 17.5"/></svg></div>
+          <div class="flow-node flow-node--cloud">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 18.5c-2.3 0-4.1-1.8-4.1-4s1.8-4 4.1-4c.7-3 3.3-5 6.2-5 2.8 0 5.1 1.8 6 4.3 1.9.3 3.3 1.9 3.3 3.9 0 2.2-1.8 4.1-4.1 4.1Z"/><path d="M9.2 13.4a3.2 3.2 0 0 1 5-1.4M15 12.4a3.2 3.2 0 0 1-5 1.4"/></svg>
+            <b>Your Google Drive</b>
+            Private <code>appDataFolder</code>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M14 6.5 19.5 12 14 17.5"/></svg></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="3.6" width="11.2" height="16.8" rx="2.6"/><path d="M10.4 6.4h3.2"/><path d="M10.6 17.6h2.8"/></svg>
+            <b>Second device</b>
+            Picks changes up on launch and on app resume
+          </div>
+        </div>
+
+        <div class="panel panel--soft" style="margin-top:28px">
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>The newer version wins</b>Tasks and tags are merged by <code>updatedAt</code>, so edits from your phone and desktop do not overwrite each other.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Deleted stays deleted</b>The trash and closed boards keep tombstones, so removed records are not resurrected from another device.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>Everything is synced</b>Tasks, tags, notes with their security keys, kanban, habits, annual dates and appearance.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.4 2.4 2.4 4.8-5"/></svg>
+              <span><b>No sign-in, no network</b>In guest mode changes stay on the device and no sync queue is created.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download-en">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Download</p>
+          <h2>Android, Windows and Linux</h2>
+          <p>Builds are published in a public releases repository while the application source stays private. All versions and changelogs are on the releases page.</p>
+        </div>
+
+        <div class="platforms">
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="2.8" width="11.2" height="18.4" rx="2.8"/><path d="M10.6 5.6h2.8"/><path d="M10.8 18.4h2.4"/></svg>
+              <h3>Android</h3>
+            </div>
+            <p>APK for phones and tablets. “Today's tasks” and “Quick note” widgets, system-level reminders.</p>
+            <a class="btn btn--primary btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Android.apk">Download APK</a>
+            <p class="platform-note">Android 6.0+ · allow installs from this source when prompted</p>
+          </div>
+
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4.4" width="18.4" height="12" rx="2.2"/><path d="M9 20h6M12 16.4V20"/></svg>
+              <h3>Windows</h3>
+            </div>
+            <p>x64 ZIP: unpack and run <code>ToDo.exe</code>. Quick note, autostart and a detail panel next to the list.</p>
+            <a class="btn btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Windows_x64.zip">Download for Windows</a>
+            <p class="platform-note">Windows 10/11 · reminders run while the app is open</p>
+          </div>
+
+          <div class="platform">
+            <div class="platform-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4.4" width="18.4" height="15.2" rx="2.4"/><path d="m6.4 9 2.6 2.6-2.6 2.6M12 15h5"/></svg>
+              <h3>Linux</h3>
+            </div>
+            <p>x64 archive: unpack and run <code>./ToDo</code>. Same editor, kanban and habit trackers.</p>
+            <a class="btn btn--small" href="https://github.com/tichdog/ToDo_Release/releases/latest/download/ToDo_Linux_x64.tar.gz">Download for Linux</a>
+            <p class="platform-note">x64 · on Wayland, pinning the note window depends on the compositor</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn--ghost" href="https://github.com/tichdog/ToDo_Release/releases/latest">
+            All releases and changelogs
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 4.6h6v6M19.4 4.6l-8.2 8.2"/><path d="M17 13.4v5.4H5V6.8h5.4"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq-en">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>The short answers</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Do I need a Google account?</summary>
+            <p>No. In guest mode everything stays on the device and no network requests are made. Signing in is only needed to sync between devices.</p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>In a local SQLite database on the device. With sync enabled, also in a snapshot file inside the app's private folder (<code>appDataFolder</code>) in your Google Drive. That file is not accessible from “My Drive”.</p>
+          </details>
+          <details>
+            <summary>What if I forget the hidden notes password?</summary>
+            <p>The content cannot be recovered: the encryption key is not stored on any server. Settings allow you to reset the protection, which removes access to already encrypted notes while the rest of your data stays intact.</p>
+          </details>
+          <details>
+            <summary>How do I delete all data?</summary>
+            <p><b>Account → Data → Delete all data</b>. The Drive snapshot copy and the appearance file are removed first, then local records, settings and scheduled notifications. The action asks for confirmation twice.</p>
+          </details>
+          <details>
+            <summary>Why do Windows and Linux reminders stop after I close the app?</summary>
+            <p>On desktop, reminders are in-process timers, so the app has to be running. On Android notifications are scheduled by the system and survive a reboot.</p>
+          </details>
+          <details>
+            <summary>Are there ads, subscriptions or analytics?</summary>
+            <p>No. The app is free, with no ads, in-app purchases or tracking SDKs.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Today's tasks are already waiting in the calendar</h2>
+          <p>Get the build for your platform. If something does not work, write to us — every report is read.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://github.com/tichdog/ToDo_Release/releases/latest">Download the latest version</a>
+            <a class="btn btn--ghost" href="support/index.html">Support and data deletion</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="assets/img/app-icon.png" alt="" width="38" height="38">
+          <span>Todo Calendar</span>
+        </a>
+        <p>
+          <span data-lang-block="ru">Офлайн-first менеджер задач для Android, Windows и Linux. Задачи, календарь, канбан, заметки и привычки в одном приложении.</span>
+          <span data-lang-block="en">Offline-first task manager for Android, Windows and Linux. Tasks, calendar, kanban, notes and habits in one app.</span>
+        </p>
+        <p class="muted"><code>com.crazyrabbit.todo</code></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>
+          <span data-lang-block="ru">Приложение</span>
+          <span data-lang-block="en">App</span>
+        </h4>
+        <ul>
+          <li><a href="#features" data-lang-block="ru">Возможности</a><a href="#features-en" data-lang-block="en">Features</a></li>
+          <li><a href="#download" data-lang-block="ru">Скачать</a><a href="#download-en" data-lang-block="en">Download</a></li>
+          <li><a href="#sync" data-lang-block="ru">Синхронизация</a><a href="#sync-en" data-lang-block="en">Sync</a></li>
+          <li><a href="support/index.html" data-lang-block="ru">Поддержка</a><a href="support/index.html" data-lang-block="en">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>
+          <span data-lang-block="ru">Документы</span>
+          <span data-lang-block="en">Documents</span>
+        </h4>
+        <ul>
+          <li><a href="privacy/index.html" data-lang-block="ru">Политика конфиденциальности</a><a href="privacy/index.html" data-lang-block="en">Privacy policy</a></li>
+          <li><a href="terms/index.html" data-lang-block="ru">Условия использования</a><a href="terms/index.html" data-lang-block="en">Terms of use</a></li>
+          <li><a href="support/index.html#delete-data" data-lang-block="ru">Удаление данных</a><a href="support/index.html#delete-data" data-lang-block="en">Data deletion</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>
+          <span data-lang-block="ru">Разработчик</span>
+          <span data-lang-block="en">Developer</span>
+        </h4>
+        <ul>
+          <li><a href="https://github.com/tichdog">github.com/tichdog</a></li>
+          <li><a href="https://github.com/tichdog/ToDo_Release/releases/latest" data-lang-block="ru">Релизы</a><a href="https://github.com/tichdog/ToDo_Release/releases/latest" data-lang-block="en">Releases</a></li>
+          <li><a href="https://github.com/tichdog/ToDo_Release/issues" data-lang-block="ru">Сообщить о проблеме</a><a href="https://github.com/tichdog/ToDo_Release/issues" data-lang-block="en">Report an issue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Todo Calendar</span>
+      <span>
+        <span data-lang-block="ru">Сделано без аналитики и рекламы</span>
+        <span data-lang-block="en">Made without analytics or ads</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
