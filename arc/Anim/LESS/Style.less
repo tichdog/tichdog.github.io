@@ -1,0 +1,184 @@
+html{
+  background: linear-gradient(#000, #3f3f3f, #000000);
+}
+
+.header{
+
+  display: inline-block;
+
+  &-h1{
+    animation-name: animationText;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    transform: translateX(50px);
+    font-size: 4em;
+    color: #fff6bb;
+    text-align: left;
+    padding-top: 0.5em;
+  }
+
+}
+
+h2{
+
+  animation-name: animH2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  font-size: 3.5em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+p{
+  color: white;
+  font-size: 2em;
+  margin: 1em;
+}
+
+.select{
+  margin: 0 1em 1em 1em;
+  font-size: 2.5em;
+  color: white;
+  background: red;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+
+  &:hover{
+    background: #850000;
+    transform: translateY(-0.1em) translateX(-0.1em);
+  }
+
+  &:active{
+    background: #2dd300;
+  }
+
+/*  &:focus{
+    background: #5b5b5b;
+  }*/
+}
+
+
+
+.main{
+
+  &-h2{
+    display: block;
+    text-align: center;
+  }
+  
+  &-block{
+    background: linear-gradient(#ffdd78, #ff9a9a, #c0ff8e);
+    padding: 0 5em 3em 5em;
+    
+    &-cat{
+      text-align: center;
+    }
+    
+    
+    &-p{
+      text-align: justify;
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  &-shadow{
+    position: relative;
+    width: 500px;
+    height: 310px;
+    background: linear-gradient(#000000, #262626);
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      left: -2px;
+      bottom: -4px;
+      background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+      background-size: 500%;
+      z-index: -1;
+      animation: anim 30s ease infinite;
+    }
+
+    &:after{
+      filter: blur(25px);
+    }
+  }
+
+  &-container-cat{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 2em;
+
+    &-v2{
+      margin: 2em;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+  }
+}
+
+@keyframes anim {
+  0%{
+    background-position: 0 0;
+  }
+
+  50%{
+    background-position: 300% 0;
+  }
+
+  100%{
+    background-position: 0 0;
+  }
+}
+
+@keyframes animationText {
+  0%{
+    transform: translateX(50px);
+  }
+
+  50%{
+    transform: translateX(860px);
+  }
+
+  100%{
+    transform: translateX(50px);
+  }
+}
+
+@keyframes animSVG {
+  0%{
+    fill: white;
+  }
+
+  50%{
+    fill: black;
+  }
+
+  100%{
+    fill: white;
+  }
+}
+
+@keyframes animH2 {
+  0%, 100%{
+    font-size: 3.5em;
+  }
+  50%{
+    font-size: 4em;
+  }
+}
+
+svg path{
+  fill: white;
+
+  animation-name: animSVG;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}

@@ -1,0 +1,193 @@
+html{
+  background-color: darkgray;
+}
+
+body{
+  margin: 0 4%;
+  background-color: darkgray;
+}
+
+header, footer{
+  margin-top: 2em;
+  /*height: 6em;*/
+  background-color: #97bb97;
+  border-radius: 0.5em;
+}
+
+.main{
+  margin-top: 4em;
+
+  &-container{
+    display: flex;
+    gap: 1em;
+  }
+
+  &-spam{
+    flex-grow: 1;
+    max-height: 21em;
+    background-color: #cea2a2;
+    min-width: 20%;
+    border-radius: 0.7em;
+
+    &-text{
+      padding: 0.5em;
+      font-size: 1.2em;
+    }
+
+  }
+
+  &-news{
+    gap: 1em;
+    flex-grow: 3;
+    flex-wrap: wrap;
+    background-color: darkgray;
+    display: flex;
+  }
+  &-head{
+    width: 100%;
+    flex-grow: 1;
+    background-color: #adced7;
+    /*height: 18em;*/
+    border-radius: 0.7em;
+
+    &-text{
+      padding: 0.2em;
+      font-size: 1.5em;
+    }
+  }
+
+  &-block{
+    max-width: 30%;
+    flex-grow: 1;
+    background-color: gray;
+    /*height: 22em;*/
+  }
+
+  &-text{
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+footer{
+
+}
+.container{
+  display: flex;
+}
+
+.item{
+
+}
+
+h1{
+  font-family: sans-serif;
+  font-size: 3em;
+  text-align: center;
+
+  padding: 0.3em;
+}
+
+h2{
+  font-size: 1.2em;
+  text-align: justify;
+  padding: 0.5em;
+}
+
+
+img{
+  min-height: 85%;
+}
+
+img:hover{
+  opacity: 0.5;
+}
+
+@media screen and(max-width: 625px) and  (min-width: 320px){
+  h1{
+    font-size: 2em;
+  }
+
+  header{
+    margin-top: 1em;
+  }
+
+  footer{
+    margin-top: 1em;
+  }
+
+  .main{
+    margin-top: 1em;
+
+    &-container{
+      gap: 0;
+      display: table;
+    }
+
+    &-spam{
+      background-color: #b60e38;
+      margin-bottom: 1em;
+    }
+
+    &-news{
+      background-color: darkgray;
+      display: table;
+    }
+
+    &-block{
+      text-align: center;
+      min-width: 85%;
+      margin: 1em 2em 1em 2em;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 625px) {
+  header{
+    margin-top: 1em;
+  }
+
+  footer{
+    margin-top: 1em;
+  }
+
+  .main{
+    margin-top: 1em;
+
+    &-container{
+      gap: 0;
+      display: table;
+    }
+
+    &-spam{
+      background-color: deepskyblue;
+      margin-bottom: 1em;
+    }
+
+    &-news{
+      background-color: darkgray;
+      display: table;
+    }
+
+    &-block{
+      text-align: center;
+      min-width: 90%;
+      margin: 1em 2.5em 1em 2.5em;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1435px) and (min-width: 1000px){
+  .main{
+    &-spam{
+      max-height: 32em;
+      background-color: greenyellow;
+    }
+
+    &-text{
+      font-size: 1.5em;
+    }
+  }
+}

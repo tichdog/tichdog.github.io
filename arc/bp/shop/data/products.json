@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "title": "Корм для собак",
+        "price": "1900",
+        "discount": "5",
+        "img": "1.webp"
+    },
+    {
+        "id": 2,
+        "title": "Корм для собак",
+        "price": "1000",
+        "discount": "8",
+        "img": "2.webp"
+    },
+    {
+        "id": 3,
+        "title": "Корм для кошек",
+        "price": "3500",
+        "discount": "30",
+        "img": "3.webp"
+    },
+    {
+        "id": 4,
+        "title": "Корм для кошек",
+        "price": "1200",
+        "discount": "3",
+        "img": "4.webp"
+    },
+    {
+        "id": 5,
+        "title": "Корм для кошек",
+        "price": "4000",
+        "discount": "10",
+        "img": "5.webp"
+    },
+    {
+        "id": 6,
+        "title": "Корм для собак",
+        "price": "1200",
+        "discount": "10",
+        "img": "6.webp"
+    },
+    {
+        "id": 7,
+        "title": "Корм для собак",
+        "price": "1900",
+        "discount": "5",
+        "img": "1.webp"
+    },
+    {
+        "id": 8,
+        "title": "Корм",
+        "price": "1000",
+        "discount": "8",
+        "img": "2.webp"
+    },
+    {
+        "id": 9,
+        "title": "Корм",
+        "price": "3500",
+        "discount": "30",
+        "img": "3.webp"
+    },
+    {
+        "id": 10,
+        "title": "Корм",
+        "price": "1200",
+        "discount": "3",
+        "img": "4.webp"
+    },
+    {
+        "id": 11,
+        "title": "Корм",
+        "price": "4000",
+        "discount": "10",
+        "img": "5.webp"
+    },
+    {
+        "id": 12,
+        "title": "Корм",
+        "price": "1200",
+        "discount": "10",
+        "img": "6.webp"
+    }
+]
+

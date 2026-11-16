@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('../fonts/Caveat-SemiBold.eot');
+    src: url('../fonts/Caveat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Caveat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Caveat-SemiBold.woff') format('woff'),
+    url('../fonts/Caveat-SemiBold.ttf') format('truetype'),
+    url('../fonts/Caveat-SemiBold.svg#Caveat-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-family: Caveat, sans-serif;
+}
+
+.main-page{
+    width: 100%;
+    height: 100%;
+    background: #fff url(../image/bg.jpg) center center repeat;
+    padding:3% 10%;
+    /*background-size: cover;*/
+}
+
+/* Скроллбар */
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #dec59d;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #4f4f4f;
+    border-radius: 5px;
+    border: 3px solid #dec59d;
+}
+
+h1{
+    font-size: 4em;
+    padding: 0 0 0.5em 0;
+}
+
+.main-img{
+    padding: 1em 0 0 0;
+}
+
+img{
+    border-radius: 1em;
+    width: 70%;
+    height: 70%;
+    border: dashed black;
+}
+
+.main-head, .main-content{
+    text-align: center;
+}
+
+
+a{
+    padding: 1em;
+    font-size: 2em;
+    color: black;
+    display: inline-block;
+    border: dashed black;
+    animation: btn 5s infinite;
+    /*background: rgba(0,0,0, 10%);*/
+
+}
+
+@keyframes btn {
+    0%{
+        background: rgba(0,0,0,0);
+        color: black;
+    }
+
+    50%{
+        background: rgba(0,0,0, 15%);
+        color: #420000;
+    }
+
+    100%{
+        background: rgba(0,0,0,0);
+        color: black;
+    }
+}
+

@@ -1,0 +1,115 @@
+/*@import "Style.css";*/
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('../fonts/Caveat-SemiBold.eot');
+    src: url('../fonts/Caveat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Caveat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Caveat-SemiBold.woff') format('woff'),
+    url('../fonts/Caveat-SemiBold.ttf') format('truetype'),
+    url('../fonts/Caveat-SemiBold.svg#Caveat-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-family: Caveat, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #fff url(../image/bg.jpg) center center repeat;
+    padding:1% 10%;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 0.3em 0 0.5em 0;
+}
+
+h2{
+    text-align: left;
+    font-size: 2.5em;
+
+    padding: 0.5em 0 0 0;
+}
+
+.head-link{
+    padding: 1% 0 0 1%;
+    text-align: left;
+    font-size: 2em;
+}
+
+.link-home{
+    color: black;
+    padding: 0 1em 0 1em;
+    border: dashed black;
+    animation: btn 5s infinite;
+}
+
+.img-block{
+    display: inline-block;
+    text-align: left;
+    padding: 1em 1em 0 1em;
+    font-size: 1em;
+}
+
+
+img{
+    border:dashed black;
+    border-radius: 1em;
+    width: 50%;
+    height: 50%;
+    margin: 1em 2em 0 0;
+    float: left;
+}
+
+
+/* Скроллбар */
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #dec59d;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #4f4f4f;
+    border-radius: 5px;
+    border: 3px solid #dec59d;
+}
+
+.content{
+    font-size: 2em;
+    color: black;
+    text-align: justify;
+    padding: 0.5em  0 0 0;
+
+}
+
+.music-block{
+    padding-top: 1em;
+    font-size: 2em;
+
+}
+
+pre{
+    display: inline-block;
+}
+
+@keyframes btn {
+    0%{
+        background: rgba(0,0,0,0);
+    }
+
+    50%{
+        background: rgba(0,0,0,15%);
+    }
+
+    100%{
+        background: rgba(0,0,0,0);
+    }
+}

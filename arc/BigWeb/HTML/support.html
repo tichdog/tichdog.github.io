@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- width=device-width устанавливает ширину области просмотра равной ширине экрана -->
+    <meta property="og:image" content="image.jpg">
+    <!-- Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях,
+     приложениях чата или других сайтах, которые очищают URL-адреса. -->
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="../CSS/reset-css-style.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <script src="../JS/main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav class="menu" id="navbar">
+        <ul>
+            <li>
+                <a href="index.html" class="menu-btn">Главная</a>
+            </li>
+            <li>
+                <a href="gallery.html" class="menu-btn">Галерея</a>
+            </li>
+            <li>
+                <a href="profile.html" class="menu-btn">Портфолио</a>
+            </li>
+            <li>
+                <a href="#" class="menu-btn">Обратная связь</a>
+            </li>
+
+        </ul>
+
+    </nav>
+</header>
+<!--все поля должны быть обязательно заполненными;
+ имя и фамилия  - минимум 3 символа, только буквы;
+ телефон и e-mail  -  можно ввод по маске или с подсказкой;
+ пароль - не менее 8 символов (обязательно верхний, нижний регистр, знак подчеркивания и цифры);
+логин - от 5 до 8 символов;
+пол - переключатель;
+год - список-->
+<main>
+    <div class="form-main">
+        <div class="form">
+            <div class="form-logo">
+                <img src="../image/support/logo.png" alt="RaM" class="logo">
+                <h2>Rick and Morty</h2>
+                <p>Ждут тебя в свои приключения</p>
+            </div>
+            <form action="">
+                <div class="form-container">
+                    <p>Имя</p>
+                    <input type="text">
+                </div>
+                <div class="form-container">
+                    <p>Фамилия</p>
+                    <input type="text">
+                </div>
+                <div class="form-container">
+                    <p>Номер телефона</p>
+                    <input type="text">
+                </div>
+                <div class="form-container">
+                    <p>Почта</p>
+                    <input type="text">
+                </div>
+                <div class="form-container">
+                    <p>Логин</p>
+                    <input type="text">
+                </div>
+                <div class="form-container">
+                    <p>Пароль</p>
+                    <input type="password">
+                </div>
+                <div class="form-container">
+                    <p>Пол</p>
+                    <p>Мужской</p>
+                    <input type="radio" class="form-radio">
+                    <p>Женский</p>
+                    <input type="radio" class="form-radio">
+                </div>
+                <div class="form-container">
+                    <p>Год рождения</p>
+                    <input type="text">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="main">
+        <div class="footer-box">
+            <p class="footer-p">
+                Наша почта:
+                <a href="mailto:RickAndMortyFUN@plum.com" class="footer-p">
+                    RickAndMortyFUN@plum.com
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
