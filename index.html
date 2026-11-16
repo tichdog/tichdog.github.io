@@ -92,7 +92,7 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Офлайн-first менеджер задач</p>
+          <p class="eyebrow">Todo Calendar — офлайн-first менеджер задач</p>
           <h1>Все дела и даты&nbsp;— <em>в одном спокойном месте</em></h1>
           <p class="lead">Todo Calendar собирает задачи, календарь, канбан-доски, заметки, ежедневные дела и привычки в одно приложение. Работает без интернета, синхронизируется через ваш собственный Google Drive и не собирает данные о вас.</p>
           <div class="actions">
@@ -380,6 +380,48 @@
       </div>
     </section>
 
+    <section class="section" id="google-api">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Google API</p>
+          <h2>Google нужен только для входа и синхронизации</h2>
+          <p>Todo Calendar — офлайн-first приложение: без входа через Google оно целиком работает на устройстве. Если вы подключаете аккаунт, приложение запрашивает два минимальных разрешения и использует полученные данные исключительно для того, чтобы ваши задачи совпадали на ваших устройствах.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M15.2 9.4A3.9 3.9 0 0 0 8.4 12a3.9 3.9 0 0 0 6.8 2.6"/></svg>
+            </span>
+            <h3>Что именно доступно</h3>
+            <p>Email аккаунта и область <code>drive.appdata</code> — отдельная приватная папка приложения в вашем Google Drive. Gmail, календарь, контакты и остальные файлы Drive недоступны.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16.5V5.4M7.6 9.8 12 5.4l4.4 4.4"/><path d="M4.6 16.2v2.1c0 .8.6 1.4 1.4 1.4h12c.8 0 1.4-.6 1.4-1.4v-2.1"/></svg>
+            </span>
+            <h3>Зачем это нужно</h3>
+            <p>Email служит локальным идентификатором, чтобы данные разных аккаунтов на одном устройстве не смешивались. Доступ к папке нужен, чтобы загружать и скачивать один файл снапшота <code>todo_calendar_sync.json</code>.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 5 6v6c0 4 3 7 7 8.4 4-1.4 7-4.4 7-8.4V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+            </span>
+            <h3>Что происходит с данными</h3>
+            <p>Они остаются между приложением и вашим Drive. У проекта нет серверов, поэтому данные Google не передаются третьим лицам, не продаются и не покидают ваш аккаунт.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p><b>Google API Services User Data Policy.</b> Использование данных, полученных через Google API, соответствует <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, включая требования Limited Use. Полученные данные используются только для синхронизации внутри приложения; они не передаются третьим лицам, не продаются, не используются для рекламы, аналитики или обучения моделей ИИ и не применяются для создания или распространения интимных изображений без согласия человека (NCII).</p>
+        </div>
+
+        <p class="muted">Доступ отзывается в любой момент: <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> или кнопкой «Выйти» в разделе «Аккаунт». Подробности — в <a href="privacy/index.html">политике конфиденциальности</a>.</p>
+      </div>
+    </section>
+
     <section class="section" id="sync">
       <div class="wrap">
         <div class="section-head">
@@ -537,7 +579,7 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Offline-first task manager</p>
+          <p class="eyebrow">Todo Calendar — offline-first task manager</p>
           <h1>Every task and date&nbsp;— <em>in one calm place</em></h1>
           <p class="lead">Todo Calendar brings tasks, calendar, kanban boards, notes, daily routines and habit trackers into one app. It works without internet, syncs through your own Google Drive and does not collect data about you.</p>
           <div class="actions">
@@ -816,6 +858,48 @@
             </table>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="google-api-en">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Google API</p>
+          <h2>Google is used only for sign-in and sync</h2>
+          <p>Todo Calendar is an offline-first app: without Google sign-in it runs entirely on your device. If you connect an account, the app requests two minimal permissions and uses the data it receives only to keep your tasks in sync across your own devices.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card card--third">
+            <span class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M15.2 9.4A3.9 3.9 0 0 0 8.4 12a3.9 3.9 0 0 0 6.8 2.6"/></svg>
+            </span>
+            <h3>What we can access</h3>
+            <p>Your account email and the <code>drive.appdata</code> scope — a private app folder in your own Google Drive. Gmail, Calendar, Contacts and the rest of your Drive stay out of reach.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16.5V5.4M7.6 9.8 12 5.4l4.4 4.4"/><path d="M4.6 16.2v2.1c0 .8.6 1.4 1.4 1.4h12c.8 0 1.4-.6 1.4-1.4v-2.1"/></svg>
+            </span>
+            <h3>Why it is needed</h3>
+            <p>The email is a local identifier so that data from different accounts on one device never mixes. Folder access is used to upload and download a single snapshot file, <code>todo_calendar_sync.json</code>.</p>
+          </article>
+
+          <article class="card card--third">
+            <span class="card-ico card-ico--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 5 6v6c0 4 3 7 7 8.4 4-1.4 7-4.4 7-8.4V6Z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg>
+            </span>
+            <h3>What happens to the data</h3>
+            <p>It stays between the app and your Drive. The project has no servers, so Google user data is never transferred to third parties, never sold and never leaves your account.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p><b>Google API Services User Data Policy.</b> Todo Calendar's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. The data is used only to sync the app's own content; it is not transferred to third parties, not sold, not used for advertising, analytics or AI model training, and not used to create or distribute non-consensual intimate imagery (NCII).</p>
+        </div>
+
+        <p class="muted">You can revoke access at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> or with the Sign out button in the Account section. Details are in the <a href="privacy/index.html">privacy policy</a>.</p>
       </div>
     </section>
 

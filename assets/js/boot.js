@@ -27,8 +27,10 @@
 
   var lang = read('tc-site-lang');
   if (lang !== 'ru' && lang !== 'en') {
-    var nav = (navigator.language || 'ru').toLowerCase();
-    lang = nav.indexOf('ru') === 0 ? 'ru' : nav.indexOf('en') === 0 ? 'en' : 'ru';
+    // Без явного языка (краулеры, редкие локали) показываем английский:
+    // так страницу читают проверяющие Google Play и OAuth-верификации.
+    var nav = (navigator.language || 'en').toLowerCase();
+    lang = nav.indexOf('ru') === 0 ? 'ru' : 'en';
   }
   root.setAttribute('data-lang', lang);
   root.setAttribute('lang', lang);

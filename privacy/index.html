@@ -120,6 +120,27 @@
           <li>Все данные можно удалить из приложения в пару шагов.</li>
         </ul>
 
+        <h2 id="data-safety">1.1. Сводка для Google Play Data safety</h2>
+        <p>Таблица ниже перечисляет всё, что приложение делает с данными Google, — те же ответы даны в форме Data safety в Google Play.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Категория</th><th>Что делает приложение</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Какие данные получает</td><td>Email аккаунта Google (идентификатор пользователя). Содержимое задач и заметок — только если вы сами включили синхронизацию</td></tr>
+              <tr><td>Зачем</td><td>Вход в аккаунт и синхронизация между вашими устройствами. Исключительно функции приложения</td></tr>
+              <tr><td>Куда передаются</td><td>Только в ваш собственный Google Drive, в приватную папку приложения. Третьим лицам — никогда</td></tr>
+              <tr><td>Продажа данных</td><td>Не продаются</td></tr>
+              <tr><td>Реклама, аналитика, обучение ИИ</td><td>Не используются. Данные Google не применяются для рекламы, аналитики, обучения моделей и для создания NCII</td></tr>
+              <tr><td>Защита</td><td>TLS при обращении к Google API; скрытые заметки — AES-256-GCM; ключ хранится только в памяти сессии</td></tr>
+              <tr><td>Срок хранения</td><td>До удаления вами — в приложении или в Google Drive</td></tr>
+              <tr><td>Удаление</td><td>«Аккаунт → Данные → Удалить все данные»; отзыв доступа — <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a></td></tr>
+              <tr><td>Контакт</td><td><a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <h2 id="who">2. Кто обрабатывает данные</h2>
         <p>Приложение Todo Calendar (пакет <code>com.crazyrabbit.todo</code>) разрабатывается и распространяется независимым разработчиком под именем <b>tichdog</b>. Оператором данных в смысле законодательства о персональных данных выступает сам пользователь: приложение работает на его устройстве и под его контролем.</p>
         <p>У разработчика нет серверов, баз данных пользователей и доступа к их содержимому. Связаться можно по любому каналу, указанному в разделе <a href="#contact">«Контакт»</a>.</p>
@@ -261,6 +282,27 @@
           <li>Hidden notes are encrypted on the device; the key never leaves it.</li>
           <li>All data can be deleted from the app in a couple of steps.</li>
         </ul>
+
+        <h2 id="en-data-safety">1.1. Google Play data safety summary</h2>
+        <p>The table below lists everything the app does with Google user data — the same answers we give in the Google Play Data safety form.</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Category</th><th>What the app does</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Data accessed</td><td>Google account email (user identifier). Task and note content — only if you enable sync yourself</td></tr>
+              <tr><td>Purpose</td><td>Sign-in and sync between your own devices. App functionality only</td></tr>
+              <tr><td>Recipients</td><td>Your own Google Drive only, in the app's private folder. Never shared with third parties</td></tr>
+              <tr><td>Sale of data</td><td>Never sold</td></tr>
+              <tr><td>Advertising, analytics, AI training</td><td>Not used. Google user data is not used for ads, analytics, model training or to create NCII</td></tr>
+              <tr><td>Protection</td><td>TLS for Google API calls; hidden notes use AES-256-GCM with a key kept in session memory only</td></tr>
+              <tr><td>Retention</td><td>Until you delete it, in the app or in Google Drive</td></tr>
+              <tr><td>Deletion</td><td>Account → Data → Delete all data; revoke access at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a></td></tr>
+              <tr><td>Contact</td><td><a href="https://github.com/tichdog/ToDo_Release/issues" rel="noopener">github.com/tichdog/ToDo_Release/issues</a></td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="en-who">2. Who processes the data</h2>
         <p>Todo Calendar (package <code>com.crazyrabbit.todo</code>) is developed and distributed by an independent developer known as <b>tichdog</b>. In data-protection terms the user acts as the controller: the app runs on the user's device and under the user's control.</p>
